@@ -40,6 +40,7 @@
     "redux-mock-store": "^1.5.4",
     "rollup": "^2.3.2",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-filesize": "^6.2.1",
     "rollup-plugin-includepaths": "^0.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.2",
@@ -51,9 +52,9 @@
     "stylelint-order": "4.0.0"
   },
   "scripts": {
-    "start:demo": "craco start",
-    "start": "npm-run-all -p start:demo watch:lib",
-    "build": "craco build",
+    "start:app": "react-scripts start",
+    "start": "npm-run-all -p start:app watch:lib",
+    "build": "react-scripts build",
     "build:lib": "npx rollup -c",
     "watch:lib": "npx rollup -c rollup.config.development.js -w",
     "test": "craco test --env=jest-environment-jsdom-sixteen",

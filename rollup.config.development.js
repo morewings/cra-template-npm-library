@@ -5,6 +5,7 @@ import includePaths from 'rollup-plugin-includepaths';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcssPresetEnv from 'postcss-preset-env';
 import babel from 'rollup-plugin-babel';
+import {eslint} from 'rollup-plugin-eslint';
 import pkg from './package.json';
 
 const POSTCSS_PLUGINS = [
@@ -19,10 +20,6 @@ const config = {
   output: {
     file: `src/npm-library.js`,
     format: 'es',
-    globals: {
-      react: 'React',
-      'react-dom': 'ReactDOM',
-    },
     exports: 'named',
   },
   plugins: [
@@ -32,6 +29,9 @@ const config = {
       paths: ['src'],
       external: Object.keys(pkg.dependencies),
       extensions: ['.js', '.json', '.html'],
+    }),
+    eslint({
+      throwOnError: true,
     }),
     postcss({
       extract: false,
