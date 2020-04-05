@@ -10,7 +10,6 @@
     "types"
   ],
   "dependencies": {
-    "@craco/craco": "^5.6.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -18,6 +17,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
+    "@craco/craco": "^5.6.4",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@testing-library/jest-dom": "^5.3.0",
@@ -37,7 +37,8 @@
     "prettier": "^2.0.2",
     "react-scripts": "3.4.1",
     "react-test-renderer": "^16.13.1",
-    "redux-mock-store": "^1.5.4",
+    "recursive-copy": "^2.0.10",
+    "rimraf": "^3.0.2",
     "rollup": "^2.3.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-eslint": "^7.0.0",
@@ -62,7 +63,10 @@
     "fix:js": "npx eslint --fix ./src/",
     "lint:js": "npx eslint ./src/",
     "lint:style": "npx stylelint ./src/",
-    "fix:style": "npx stylelint ./src/ --fix"
+    "fix:style": "npx stylelint ./src/ --fix",
+    "clean:files": "node ./cleanFiles.js",
+    "copy:files": "node ./copyFiles.js",
+    "prepublishOnly": "yarn clean:files && yarn copy:files"
   },
   "eslintConfig": {
     "extends": "react-app"

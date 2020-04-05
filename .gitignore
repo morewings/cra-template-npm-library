@@ -24,3 +24,7 @@ yarn-error.log*
 
 # lib dev file
 /src/npm-library.js
+
+# template
+/template/*
+/template/!gitignore

@@ -1,0 +1,26 @@
+module.exports = {
+  husky: {
+    config: '.huskyrc',
+    template: 'huskyrc-template',
+  },
+  templateDir: './template',
+  files: [
+    '.env',
+    '.eslintrc',
+    '.lintstagedrc',
+    '.nvmrc',
+    '.prettierrc',
+    '.stylelintrc',
+    'babel.config.js',
+    'craco.config.js',
+    'jest.config.js',
+    'jsconfig.json',
+    'README.md',
+    'README_CRA.md',
+    'rollup.config.development.js',
+    'rollup.config.production.js',
+    'lib',
+    'public',
+    'src',
+  ],
+};
