@@ -32,6 +32,7 @@ const config = {
     }),
     eslint({
       throwOnError: true,
+      exclude: ['**/*.css'],
     }),
     postcss({
       extract: false,
