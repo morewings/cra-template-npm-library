@@ -71,5 +71,6 @@
         "react/prop-types": "off"
       }
     }
-  ]
+  ],
+  "ignorePatterns": ["npm-library.js"]
 }
