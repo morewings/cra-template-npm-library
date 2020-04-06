@@ -1,13 +1,27 @@
 {
   "name": "cra-template-npm-library",
   "version": "0.1.0",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.esm.js",
-  "browser": "lib/index.js",
-  "style": "lib/default.css",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "description": "Create React App template to build and publish NPM libraries with rollup, eslint and stylelint",
+  "main": "template.json",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra-template",
+    "template",
+    "react-testing-library",
+    "testing-library",
+    "eslint",
+    "npm",
+    "rollup",
+    "stylelint"
+  ],
   "files": [
-    "lib",
-    "types"
+    "template",
+    "template.json"
   ],
   "dependencies": {
     "prop-types": "^15.7.2",

@@ -13,12 +13,8 @@ import pkg from './package.json';
 
 const OUTPUT_DATA = [
   {
-    file: pkg.browser,
-    format: 'umd',
-  },
-  {
     file: pkg.main,
-    format: 'cjs',
+    format: 'umd',
   },
   {
     file: pkg.module,

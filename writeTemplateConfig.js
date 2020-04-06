@@ -30,6 +30,9 @@ const scripts = cleanConfig({...pkg.scripts}, excludedScripts);
 
 const template = {
   package: {
+    main: 'lib/index.cjs.js',
+    module: 'lib/index.esm.js',
+    style: 'lib/default.css',
     dependencies,
     scripts,
   },
