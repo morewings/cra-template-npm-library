@@ -980,15 +980,6 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@craco/craco@^5.6.4":
-  version "5.6.4"
-  resolved "https://registry.yarnpkg.com/@craco/craco/-/craco-5.6.4.tgz#de7a707c727864f39e6afc192fb6732c3ca45f90"
-  integrity sha512-/Qi6yPMOBC7SEZJEDI5vYaPiGFs7HzO4AAZkGB0W3MX2OCw4u4FZC+ZO6TBptGzM3QLrF7WFt5AyQnXhNBcn3A==
-  dependencies:
-    cross-spawn "^7.0.0"
-    lodash "^4.17.15"
-    webpack-merge "^4.2.2"
-
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -2322,20 +2313,7 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-autoprefixer@^9.6.1:
-  version "9.7.4"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.7.4.tgz#f8bf3e06707d047f0641d87aee8cfb174b2a5378"
-  integrity sha512-g0Ya30YrMBAEZk60lp+qfX5YQllG+S5W3GYCFvyHTvhOki0AEQJLPEcIuGRsqVwLi8FvXPVtwTGhfr38hVpm0g==
-  dependencies:
-    browserslist "^4.8.3"
-    caniuse-lite "^1.0.30001020"
-    chalk "^2.4.2"
-    normalize-range "^0.1.2"
-    num2fraction "^1.2.2"
-    postcss "^7.0.26"
-    postcss-value-parser "^4.0.2"
-
-autoprefixer@^9.7.4, autoprefixer@^9.7.5:
+autoprefixer@^9.6.1, autoprefixer@^9.7.5:
   version "9.7.5"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.7.5.tgz#8df10b9ff9b5814a8d411a5cfbab9c793c392376"
   integrity sha512-URo6Zvt7VYifomeAfJlMFnYDhow1rk2bufwkbamPEAtQFcL11moLk4PnR7n9vlu7M+BkXAZkHFA0mIcY7tjQFg==
@@ -2954,7 +2932,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001020, caniuse-lite@^1.0.30001035:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001035:
   version "1.0.30001035"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001035.tgz#2bb53b8aa4716b2ed08e088d4dc816a5fe089a1e"
   integrity sha512-C1ZxgkuA4/bUEdMbU5WrGY4+UhMFFiXrgNAfxiMIqWgFTWfv/xsZCS2xEHT2LMq7xAZfuAnu6mcqyDl0ZR6wLQ==
@@ -7748,7 +7726,7 @@ memorystream@^0.3.1:
   resolved "https://registry.yarnpkg.com/memorystream/-/memorystream-0.3.1.tgz#86d7090b30ce455d63fbae12dda51a47ddcaf9b2"
   integrity sha1-htcJCzDORV1j+64S3aUaR93K+bI=
 
-meow@^6.0.1:
+meow@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/meow/-/meow-6.1.0.tgz#4ff4641818d3502afcddc631f94cb6971a581cb3"
   integrity sha512-iIAoeI01v6pmSfObAAWFoITAA4GgiT45m4SmJgoxtZfvI0fyZwhV4d0lTwiUXvAKIPlma05Feb2Xngl52Mj5Cg==
@@ -9546,7 +9524,7 @@ postcss-safe-parser@4.0.1:
   dependencies:
     postcss "^7.0.0"
 
-postcss-safe-parser@^4.0.1:
+postcss-safe-parser@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/postcss-safe-parser/-/postcss-safe-parser-4.0.2.tgz#a6d4e48f0f37d9f7c11b2a581bf00f8ba4870b96"
   integrity sha512-Uw6ekxSWNLCPesSv/cmqf2bY/77z11O7jZGPax3ycZMFU/oi2DMH9i89AdHc1tRwFg/arFoEwX0IS3LCUxJh1g==
@@ -11581,12 +11559,12 @@ stylelint-order@4.0.0:
     postcss "^7.0.26"
     postcss-sorting "^5.0.1"
 
-stylelint@13.2.1:
-  version "13.2.1"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-13.2.1.tgz#9101fcd70791856530049816ff53d980ecd561df"
-  integrity sha512-461ZV4KpUe7pEHHgMOsH4kkjF7qsjkCIMJYOf7QQC4cvgPUJ0z4Nj+ah5fvKl1rzqBqc5EZa6P0nna4CGoJX+A==
+stylelint@13.3.0:
+  version "13.3.0"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-13.3.0.tgz#06a5e3d34e99d1d02891bc827f660f2bd2e79897"
+  integrity sha512-ehNzQu9JAbxuiNhUhmoyPgMjIdz7Fg1AxC5urPVhKotto/faF5GxwljSoLvQa6pB6yd+BVuofApWjWT/6/rBMQ==
   dependencies:
-    autoprefixer "^9.7.4"
+    autoprefixer "^9.7.5"
     balanced-match "^1.0.0"
     chalk "^3.0.0"
     cosmiconfig "^6.0.0"
@@ -11606,7 +11584,7 @@ stylelint@13.2.1:
     lodash "^4.17.15"
     log-symbols "^3.0.0"
     mathml-tag-names "^2.1.3"
-    meow "^6.0.1"
+    meow "^6.1.0"
     micromatch "^4.0.2"
     normalize-selector "^0.2.0"
     postcss "^7.0.27"
@@ -11617,7 +11595,7 @@ stylelint@13.2.1:
     postcss-media-query-parser "^0.2.3"
     postcss-reporter "^6.0.1"
     postcss-resolve-nested-selector "^0.1.1"
-    postcss-safe-parser "^4.0.1"
+    postcss-safe-parser "^4.0.2"
     postcss-sass "^0.4.2"
     postcss-scss "^2.0.0"
     postcss-selector-parser "^6.0.2"
@@ -12483,13 +12461,6 @@ webpack-manifest-plugin@2.2.0:
     lodash ">=3.5 <5"
     object.entries "^1.1.0"
     tapable "^1.0.0"
-
-webpack-merge@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
-  integrity sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==
-  dependencies:
-    lodash "^4.17.15"
 
 webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
   version "1.4.3"
