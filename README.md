@@ -4,7 +4,7 @@
 [![yarn version](https://badge.fury.io/js/cra-template-quickstart-redux.svg)](https://www.npmjs.com/package/cra-template-quickstart-redux)
 [![npm](https://img.shields.io/npm/dm/cra-template-quickstart-redux)](https://www.npmjs.com/package/cra-template-quickstart-redux)
 
-# Quickstart Redux Create React App template
+# NPM library Create React App template
 
 Opinionated quickstart [Create React App](https://github.com/facebook/create-react-app) (CRA) template with Redux, React Testing Library, eslint and stylelint configurations.
 

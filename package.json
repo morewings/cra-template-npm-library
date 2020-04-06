@@ -63,7 +63,8 @@
     "fix:style": "npx stylelint ./src/ --fix",
     "clean:files": "node ./cleanFiles.js",
     "copy:files": "node ./copyFiles.js",
-    "prepublishOnly": "yarn clean:files && yarn copy:files"
+    "write:template": "node ./writeTemplateConfig.js",
+    "prepublishOnly": "yarn clean:files && yarn copy:files && yarn write:template"
   },
   "eslintConfig": {
     "extends": "react-app"
