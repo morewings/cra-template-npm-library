@@ -58,7 +58,7 @@ const config = OUTPUT_DATA.map(({file, format}) => ({
       throwOnError: true,
     }),
     postcss({
-      extract: format === pkg.style,
+      extract: pkg.style,
       inline: false,
       plugins: POSTCSS_PLUGINS,
     }),

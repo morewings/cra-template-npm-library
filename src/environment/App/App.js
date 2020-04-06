@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component} from 'npm-library';
+import {Component} from 'lib';
 import classes from './App.module.css';
 
 const App = () => (
