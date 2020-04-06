@@ -25,6 +25,7 @@ yarn-error.log*
 # template
 /template/*
 !/template/gitignore
+!/template/README_CRA.md
 
 # lib
 /lib/*

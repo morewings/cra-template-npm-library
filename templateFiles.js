@@ -15,7 +15,6 @@ module.exports = {
     'jsconfig.json',
     'prepare.js',
     'README.md',
-    'README_CRA.md',
     'rollup.config.js',
     'public',
     'src',

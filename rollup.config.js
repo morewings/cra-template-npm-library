@@ -11,7 +11,7 @@ import postcssPresetEnv from 'postcss-preset-env';
 import {terser} from 'rollup-plugin-terser';
 import pkg from './package.json';
 
-const OUTPUT_DATA = [
+const outputs = [
   {
     file: pkg.main,
     format: 'umd',
@@ -22,7 +22,7 @@ const OUTPUT_DATA = [
   },
 ];
 
-const POSTCSS_PLUGINS = [
+const postcssPlugins = [
   postcssPresetEnv({
     browsers: pkg.browserslist.production,
     stage: 3,
@@ -30,7 +30,7 @@ const POSTCSS_PLUGINS = [
   autoprefixer(),
 ];
 
-const config = OUTPUT_DATA.map(({file, format}) => ({
+const config = outputs.map(({file, format}) => ({
   input: 'src/lib/index.js',
   output: {
     file,
@@ -56,7 +56,7 @@ const config = OUTPUT_DATA.map(({file, format}) => ({
     postcss({
       extract: pkg.style,
       inline: false,
-      plugins: POSTCSS_PLUGINS,
+      plugins: postcssPlugins,
     }),
     babel({
       runtimeHelpers: true,

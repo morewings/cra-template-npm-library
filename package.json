@@ -23,6 +23,15 @@
     "template",
     "template.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morewings/cra-template-npm-library",
+    "directory": "/"
+  },
+  "homepage": "https://github.com/morewings/cra-template-npm-library",
+  "bugs": {
+    "url": "https://github.com/morewings/cra-template-npm-library/issues"
+  },
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.13.1",

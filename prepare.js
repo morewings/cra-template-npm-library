@@ -3,6 +3,10 @@ const pkg = require('./package.json');
 
 const newPackage = {
   ...pkg,
+  peerDependencies: {
+    react: '>=16.8.0',
+    'react-dom': '>=16.8.0',
+  },
   files: ['lib'],
   engines: {
     node: '>=10',
