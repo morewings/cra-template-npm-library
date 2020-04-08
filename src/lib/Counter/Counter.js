@@ -4,11 +4,6 @@ import useLogic from './useLogic';
 import classes from './Counter.module.css';
 
 const Counter = ({initialValue}) => {
-  /**
-   *  Get count value from Redux store. We defined selector
-   *  (state => state.counter.value) inside counter feature folder,
-   *  to make component global state agnostic
-   */
   const {count, incrementCount} = useLogic(initialValue);
 
   return (
