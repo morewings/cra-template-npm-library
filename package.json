@@ -90,9 +90,8 @@
     "copy:files": "node ./copyFiles.js",
     "write:template": "node ./writeTemplateConfig.js",
     "prepublishOnly": "yarn clean:files && yarn copy:files && yarn write:template",
-    "docz:dev": "docz dev",
-    "docz:build": "docz build",
-    "docz:serve": "docz build && docz serve"
+    "start:docs": "docz dev",
+    "build:docs": "docz build"
   },
   "eslintConfig": {
     "extends": "react-app"
