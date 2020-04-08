@@ -100,7 +100,15 @@ You can see all changes required to enable SASS/SCSS in [corresponding PR](https
         "build": "npm-run-all build:style build:js"
     }
     ```
-3. Add `postcss.config.js` file in the root folder. With following configuration:
+3. Add postcss support to Docz. Create `gatsby-config.js` in the root of project.
+
+   ```js
+   // gatsby-config.js
+   module.exports = {
+     plugins: [`gatsby-plugin-postcss`],
+   };
+   ```
+4. Add `postcss.config.js` file in the root folder. With following configuration:
 
     ```js
     const pkg = require('./package.json');
@@ -115,7 +123,7 @@ You can see all changes required to enable SASS/SCSS in [corresponding PR](https
       ],
     };
     ```
-4. Add rule to `.gitignore` and `.stylelintrc` to ignore all css files, since we are generating them.
+5. Add rule to `.gitignore` and `.stylelintrc` to ignore all css files, since we are generating them.
 
     #### .gitignore
 
@@ -131,7 +139,7 @@ You can see all changes required to enable SASS/SCSS in [corresponding PR](https
     "ignoreFiles": ["**/*.snap", "**/*.css"]
     }
    ```
-5. Change `.lintstagedrc` to lint `pcss` files instead of `css`.
+6. Change `.lintstagedrc` to lint `pcss` files instead of `css`.
 
     ```json
     {
