@@ -23,5 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # lib
-/lib/*
+/lib
 
+# docz
+/docz
+/.docz
