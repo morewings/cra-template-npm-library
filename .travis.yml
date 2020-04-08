@@ -31,7 +31,7 @@ deploy:
     dir: docz-dist
     prod: true
     cleanup: false
-    edge: true # opt in to dpl v2
+    edge: true
     on:
       branch: docz
 

@@ -28,7 +28,7 @@
     "url": "https://github.com/morewings/cra-template-npm-library",
     "directory": "/"
   },
-  "homepage": "https://github.com/morewings/cra-template-npm-library",
+  "homepage": "https://cra-template-npm-library.netlify.com/",
   "bugs": {
     "url": "https://github.com/morewings/cra-template-npm-library/issues"
   },
