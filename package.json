@@ -17,7 +17,11 @@
     "eslint",
     "npm",
     "rollup",
-    "stylelint"
+    "stylelint",
+    "library",
+    "babel",
+    "publish",
+    "create-react-library"
   ],
   "files": [
     "template",
