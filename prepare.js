@@ -5,6 +5,12 @@ const dependencies = ['prop-types', 'react', 'react-dom'];
 
 const newPackage = {
   ...pkg,
+  husky: {
+    hooks: {
+      'pre-commit': 'lint-staged',
+      'pre-push': 'CI=true yarn test --passWithNoTests',
+    },
+  },
   dependencies: Object.fromEntries(
     Object.keys(pkg.dependencies)
       .filter(key => dependencies.some(dependency => dependency === key))
@@ -27,5 +33,3 @@ const newPackage = {
 };
 
 fs.writeFileSync('package.json', JSON.stringify(newPackage, null, 2));
-
-fs.renameSync('./huskyrc-template', '.huskyrc');

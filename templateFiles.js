@@ -1,8 +1,4 @@
 module.exports = {
-  husky: {
-    config: '.huskyrc',
-    template: 'huskyrc-template',
-  },
   templateDir: './template',
   files: [
     '.env',
