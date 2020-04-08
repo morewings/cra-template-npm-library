@@ -47,6 +47,7 @@
     "@testing-library/react-hooks": "^3.2.1",
     "@testing-library/user-event": "^10.0.0",
     "autoprefixer": "^9.7.5",
+    "docz": "^2.3.1",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-fp": "^2.3.0",
@@ -78,6 +79,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:lib": "npx rollup -c",
+    "build:lib:local": "REACT_APP_PKG_MAIN=lib/index.cjs.js REACT_APP_PKG_MODULE=lib/index.esm.js REACT_APP_PKG_STYLE=lib/default.css yarn build:lib",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject",
     "fix:js": "npx eslint --fix ./src/",
@@ -87,7 +89,10 @@
     "clean:files": "node ./cleanFiles.js",
     "copy:files": "node ./copyFiles.js",
     "write:template": "node ./writeTemplateConfig.js",
-    "prepublishOnly": "yarn clean:files && yarn copy:files && yarn write:template"
+    "prepublishOnly": "yarn clean:files && yarn copy:files && yarn write:template",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "eslintConfig": {
     "extends": "react-app"

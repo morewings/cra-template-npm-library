@@ -8,8 +8,6 @@
 
 [Create React App](https://github.com/facebook/create-react-app) (CRA) template to build and publish NPM libraries with **rollup**, **eslint** and **stylelint** configurations.
 
-Original Create React App README available [here](./README_CRA.md)
-
 ## Usage
 
 ```shell script

@@ -13,11 +13,11 @@ import pkg from './package.json';
 
 const outputs = [
   {
-    file: pkg.main,
+    file: process.env.REACT_APP_PKG_MAIN || pkg.main,
     format: 'umd',
   },
   {
-    file: pkg.module,
+    file: process.env.REACT_APP_PKG_MODULE || pkg.module,
     format: 'es',
   },
 ];
@@ -54,13 +54,14 @@ const config = outputs.map(({file, format}) => ({
       throwOnError: true,
     }),
     postcss({
-      extract: pkg.style,
+      extract: process.env.REACT_APP_PKG_STYLE || pkg.style,
       inline: false,
       plugins: postcssPlugins,
     }),
     babel({
       runtimeHelpers: true,
       exclude: 'node_modules/**',
+      configFile: './babel.config.rollup.js',
     }),
     resolve({
       browser: true,

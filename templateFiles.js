@@ -11,7 +11,7 @@ module.exports = {
     '.nvmrc',
     '.prettierrc',
     '.stylelintrc',
-    'babel.config.js',
+    'babel.config.rollup.js',
     'jsconfig.json',
     'prepare.js',
     'README.md',
