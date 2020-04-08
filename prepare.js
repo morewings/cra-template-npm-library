@@ -27,3 +27,5 @@ const newPackage = {
 };
 
 fs.writeFileSync('package.json', JSON.stringify(newPackage, null, 2));
+
+fs.renameSync('./huskyrc-template', '.huskyrc');

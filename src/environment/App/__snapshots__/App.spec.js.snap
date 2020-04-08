@@ -6,17 +6,12 @@ exports[`environment > App renders without crashing 1`] = `
     class="container"
   >
     <div
-      class="component"
-    >
-      Component hello world
-    </div>
-    <div
       class="counter"
     >
       <h2
         class="header"
       >
-        Sync counter
+        Counter
       </h2>
       <button
         class="button"

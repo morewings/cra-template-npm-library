@@ -8,7 +8,7 @@ const Counter = ({initialValue}) => {
 
   return (
     <div className={classes.counter}>
-      <h2 className={classes.header}>Sync counter</h2>
+      <h2 className={classes.header}>Counter</h2>
       <button className={classes.button} type="button" onClick={incrementCount}>
         Increment by one
       </button>
@@ -20,6 +20,9 @@ const Counter = ({initialValue}) => {
 };
 
 Counter.propTypes = {
+  /**
+   * Define initial value for the Counter
+   */
   initialValue: PropTypes.number.isRequired,
 };
 

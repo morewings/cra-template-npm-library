@@ -9,6 +9,7 @@ export default {
     'Testing',
     'Style options',
     'Documentation',
+    'Example Component',
   ],
   dest: '/docz-dist',
   title: 'Develop NPM Library with Create React App Template',
