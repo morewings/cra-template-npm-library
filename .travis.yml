@@ -13,7 +13,7 @@ script:
   - yarn lint:style
   - yarn test
   - yarn build
-  - yarn yarn build:lib:local
+  - yarn build:lib:local
 
 deploy:
   - provider: npm
