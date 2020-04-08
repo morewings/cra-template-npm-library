@@ -24,6 +24,15 @@ deploy:
     on:
       tags: true
       branch: master
+  - provider: netlify
+    site: cra-template-npm-library.netlify.com
+    auth: "$NETLIFY_TOKEN"
+    dir: docz-dist
+    skip_cleanup: true
+    cleanup: false
+    edge: true # opt in to dpl v2
+    on:
+      branch: docz
 
 notifications:
   email: false
