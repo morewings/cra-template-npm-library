@@ -26,10 +26,10 @@ SASS/SCSS support comes "out of the box" in CRA. To enable it:
 1. Install `node-sass`
 
     ```shell script
-    yarn add node-sass gatsby-plugin-postcss --dev
+    yarn add node-sass gatsby-plugin-sass --dev
     ```
 
-3. Change `.lintstagedrc` to lint `scss` files instead of `css`.
+2. Change `.lintstagedrc` to lint `scss` files instead of `css`.
 
     ```json
     {
@@ -41,7 +41,35 @@ SASS/SCSS support comes "out of the box" in CRA. To enable it:
       ]
     }
     ```
-2. Import SASS/SCSS files straight into Component.
+3. Change `rollup.config.js` to support `scss` files:
+```js
+postcss({
+  extract: process.env.REACT_APP_PKG_STYLE || pkg.style,
+  inline: false,
+  plugins: postcssPlugins,
+  extensions: ['scss'], // <=== here
+}),
+```
+4. Add scss support to Docz. Create `gatsby-config.js` in the root of project.
+
+```js
+// gatsby-config.js
+module.exports = {
+  plugins: [
+      {
+          resolve: `gatsby-plugin-sass`,
+          options: {
+            // Override the file regex for SASS
+            sassRuleTest: /\.s(a|c)ss$/,
+            // Override the file regex for CSS modules
+            sassRuleModulesTest: /\.module\.s(a|c)ss$/,
+          },
+      },
+  ]
+}
+```
+
+5. Import `scss` files straight into Component.
 
     ```js
     import React from 'react';
