@@ -158,7 +158,7 @@ You can see all changes required to enable PostCSS in [corresponding PR](https:/
 
 1. Install `less` and related plugins:
     ```shell script
-    yarn add --dev less less-watch-compiler npm-run-all
+    yarn add --dev less less-watch-compiler gatsby-plugin-less npm-run-all
     ```
 2. Modify package scripts:
 
@@ -172,6 +172,14 @@ You can see all changes required to enable PostCSS in [corresponding PR](https:/
         "build": "npm-run-all build:style build:js"
     }
     ```
+3. Add less support to Docz. Create `gatsby-config.js` in the root of project.
+
+      ```js
+      // gatsby-config.js
+      module.exports = {
+        plugins: [`gatsby-plugin-less`],
+      };
+      ```
 3. Add rule to `.gitignore` and `.stylelintrc` to ignore all css files, since we are generating them.
 
     #### .gitignore
