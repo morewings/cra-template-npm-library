@@ -29,7 +29,7 @@ deploy:
     site: cra-template-npm-library.netlify.com
     auth: "$NETLIFY_TOKEN"
     dir: docz-dist
-    skip_cleanup: true
+    prod: true
     cleanup: false
     edge: true # opt in to dpl v2
     on:
