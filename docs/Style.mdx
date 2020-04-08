@@ -26,19 +26,9 @@ SASS/SCSS support comes "out of the box" in CRA. To enable it:
 1. Install `node-sass`
 
     ```shell script
-    yarn add node-sass --dev
+    yarn add node-sass gatsby-plugin-postcss --dev
     ```
 
-2. Import SASS/SCSS files straight into Component.
-
-    ```js
-    import React from 'react';
-    import classes from './Component.module.scss'; // note the changed extension
-
-    const Component = () => (
-      <div className={classes.wrapper}>Component</div>
-    )
-    ```
 3. Change `.lintstagedrc` to lint `scss` files instead of `css`.
 
     ```json
@@ -50,6 +40,16 @@ SASS/SCSS support comes "out of the box" in CRA. To enable it:
         "stylelint --fix"
       ]
     }
+    ```
+2. Import SASS/SCSS files straight into Component.
+
+    ```js
+    import React from 'react';
+    import classes from './Component.module.scss'; // note the changed extension
+
+    const Component = () => (
+      <div className={classes.wrapper}>Component</div>
+    )
     ```
 
 You can see all changes required to enable SASS/SCSS in [corresponding PR](https://github.com/morewings/cra-template-quickstart-redux/pull/16).
