@@ -33,7 +33,7 @@ deploy:
     cleanup: false
     edge: true
     on:
-      branch: docz
+      branch: master
 
 notifications:
   email: false

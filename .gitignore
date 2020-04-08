@@ -23,10 +23,14 @@ yarn-debug.log*
 yarn-error.log*
 
 # template
+template.json
 /template/*
 !/template/gitignore
 !/template/README_CRA.md
 
 # lib
 /lib/*
+
+# docz
 .docz
+docz-dist

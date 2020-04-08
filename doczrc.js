@@ -8,6 +8,7 @@ export default {
     'Code quality tools',
     'Testing',
     'Style options',
+    'Documentation',
   ],
   dest: '/docz-dist',
   title: 'Develop NPM Library with Create React App Template',
