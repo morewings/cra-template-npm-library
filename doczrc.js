@@ -1,3 +1,3 @@
 export default {
-  ignore: ['README.md'],
+  files: '**/*.{md,markdown,mdx}',
 };
