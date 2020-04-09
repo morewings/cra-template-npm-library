@@ -29,6 +29,7 @@ jobs:
       - name: Run yarn tasks
         run: |
           yarn install --frozen-lockfile
+          yarn build:style
       - name: Publish NPM package
         uses: JS-DevTools/npm-publish@v1
         with:
