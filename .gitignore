@@ -34,3 +34,6 @@ template.json
 # docz
 .docz
 docz-dist
+
+# css
+*.css
