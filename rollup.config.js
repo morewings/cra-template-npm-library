@@ -53,6 +53,7 @@ const config = outputs.map(({file, format}) => ({
       extract: process.env.REACT_APP_PKG_STYLE || pkg.style,
       inline: false,
       plugins: postcssPlugins,
+      extensions: ['scss'],
     }),
     babel({
       babelHelpers: 'bundled',

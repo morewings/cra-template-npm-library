@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useLogic from './useLogic';
-import classes from './Counter.module.css';
+import classes from './Counter.module.scss';
 
 export const Counter = ({initialValue = 0}) => {
   const {count, incrementCount} = useLogic(initialValue);
