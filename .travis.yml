@@ -13,6 +13,8 @@ script:
   - yarn lint:style
   - yarn test
   - yarn build
+  - yarn build:lib:local
+  - yarn build:docs
 
 deploy:
   - provider: npm
@@ -22,6 +24,15 @@ deploy:
     skip_cleanup: true
     on:
       tags: true
+      branch: master
+  - provider: netlify
+    site: cra-template-npm-library.netlify.com
+    auth: "$NETLIFY_TOKEN"
+    dir: docz-dist
+    prod: true
+    cleanup: false
+    edge: true
+    on:
       branch: master
 
 notifications:

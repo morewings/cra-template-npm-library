@@ -6,9 +6,25 @@ exports[`environment > App renders without crashing 1`] = `
     class="container"
   >
     <div
-      class="component"
+      class="counter"
     >
-      Component hello world
+      <h2
+        class="header"
+      >
+        Counter
+      </h2>
+      <button
+        class="button"
+        type="button"
+      >
+        Increment by one
+      </button>
+      <div>
+        Total value: 
+        <strong>
+          0
+        </strong>
+      </div>
     </div>
   </div>
 </DocumentFragment>

@@ -1,8 +1,4 @@
 module.exports = {
-  husky: {
-    config: '.huskyrc',
-    template: 'huskyrc-template',
-  },
   templateDir: './template',
   files: [
     '.env',
@@ -11,8 +7,9 @@ module.exports = {
     '.nvmrc',
     '.prettierrc',
     '.stylelintrc',
-    'babel.config.js',
+    'babel.config.rollup.js',
     'jsconfig.json',
+    'netlify.toml',
     'prepare.js',
     'README.md',
     'rollup.config.js',

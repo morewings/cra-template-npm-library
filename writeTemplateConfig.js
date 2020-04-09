@@ -8,6 +8,7 @@ const excludedScripts = [
   'copy:files',
   'prepublishOnly',
   'write:template',
+  'build:lib:local',
 ];
 
 const cleanConfig = (items, excluded) => {

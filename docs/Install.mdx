@@ -1,0 +1,21 @@
+---
+name: 'Install'
+route: '/install'
+---
+
+1. `npx` command installs most recent stable version of CRA from npm. `--template` parameter points to this template, note that `cra-template-` prefix is omitted.
+
+    ```shell script
+    npx create-react-app %PROJECT_NAME% --template npm-library
+    ```
+    Or
+    ```shell script
+    yarn create react-app %PROJECT_NAME% --template npm-library
+    ```
+2. Run `prepare.js` script inside project directory.
+
+    ```shell script
+    cd %PROJECT_NAME%
+    node ./prepare.js # makes required package.json configuration
+    ```
+3. Commit changes.

@@ -45,7 +45,11 @@
       {
         "commonjs": true,
         "allowThis": true,
-        "exceptions": [{"property": "propTypes"}, {"property": "defaultProps"}, {"property": "current"}]
+        "exceptions": [
+          {"property": "propTypes"},
+          {"property": "defaultProps"},
+          {"property": "current"}
+        ]
       }
     ]
   },
@@ -59,9 +63,16 @@
   },
   "overrides": [
     {
-      "files": [ "./*.js", "setupTests.js"],
+      "files": ["./*.js", "setupTests.js"],
       "rules": {
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}],
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true,
+            "optionalDependencies": false,
+            "peerDependencies": false
+          }
+        ],
         "global-require": 0
       }
     },
@@ -70,7 +81,15 @@
       "rules": {
         "react/prop-types": "off"
       }
+    },
+    {
+      "files": ["src/lib/**/*.js"],
+      "rules": {
+        "import/no-restricted-paths": [
+          "error",
+          {"zones": [{"target": "./src/lib", "from": "./src/environment"}]}
+        ]
+      }
     }
-  ],
-  "ignorePatterns": ["npm-library.js"]
+  ]
 }
