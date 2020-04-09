@@ -15,7 +15,7 @@ route: '/develop_library'
 
 Development takes place inside `src` directory. There are two subdirectories inside:
 - `lib` is where your library code should live, this code will be bundled with rollup and published to NPM. Imports from `environment` directory are forbidden, eslint will throw an error. Exports from `src/lib/index.js` will be included in the library.
-- `environment` is where your development code here (CSS frameworks, demo code, mocks etc). Contents will not be bundled inside library. `src/index.js` defines what CRA will render in browser during development.
+- `environment` is where your development code lives (CSS frameworks, demo code, mocks etc). Contents will not be bundled inside library. `src/index.js` defines what CRA will render in browser during development.
 
 ```bash
 |-- environment # development code
@@ -25,7 +25,7 @@ Development takes place inside `src` directory. There are two subdirectories ins
 |       |-- App.spec.js # test file
 |       |-- __snapshots__
 |       |   └── App.spec.js.snap # test snapshot
-|       └── index.js # What you see in browser
+|       └── index.js
 |-- index.js # entry point for CRA
 |-- lib # library code
 |   |-- Component
