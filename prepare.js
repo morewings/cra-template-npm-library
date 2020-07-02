@@ -1,7 +1,17 @@
 const fs = require('fs');
 const pkg = require('./package.json');
 
-const dependencies = ['prop-types', 'react', 'react-dom'];
+const keepAsDependencies = ['prop-types', 'react', 'react-dom'];
+
+const dependencies = {};
+const devDependencies = {};
+Object.entries(pkg.dependencies).forEach(([key, value]) => {
+  if (keepAsDependencies.includes(key)) {
+    dependencies[key] = value;
+  } else {
+    devDependencies[key] = value;
+  }
+});
 
 const newPackage = {
   ...pkg,
@@ -11,16 +21,8 @@ const newPackage = {
       'pre-push': 'CI=true yarn test --passWithNoTests',
     },
   },
-  dependencies: Object.fromEntries(
-    Object.keys(pkg.dependencies)
-      .filter(key => dependencies.some(dependency => dependency === key))
-      .map(name => [name, pkg.dependencies[name]])
-  ),
-  devDependencies: Object.fromEntries(
-    Object.keys(pkg.dependencies)
-      .filter(key => dependencies.some(dependency => dependency !== key))
-      .map(name => [name, pkg.dependencies[name]])
-  ),
+  dependencies,
+  devDependencies,
   peerDependencies: {
     react: '>=16.8.0',
     'react-dom': '>=16.8.0',
@@ -33,3 +35,4 @@ const newPackage = {
 };
 
 fs.writeFileSync('package.json', JSON.stringify(newPackage, null, 2));
+fs.unlinkSync('prepare.js');
