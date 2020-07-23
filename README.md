@@ -40,3 +40,6 @@ yarn start
 - [Docz](https://www.docz.site/) for documentation and demo.
 - And [much more](https://cra-template-npm-library.netlify.com/).
 
+## Contributors
+
+@morewings, @sky0matic
