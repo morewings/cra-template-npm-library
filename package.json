@@ -72,7 +72,7 @@
     "prettier": "2.0.5",
     "react-scripts": "3.4.3",
     "react-test-renderer": "16.13.1",
-    "recursive-copy": "2.0.10",
+    "recursive-copy": "2.0.11",
     "rimraf": "3.0.2",
     "rollup": "2.22.2",
     "rollup-plugin-eslint": "7.0.0",
