@@ -52,7 +52,7 @@
     "@rollup/plugin-node-resolve": "11.2.0",
     "@testing-library/jest-dom": "5.11.9",
     "@testing-library/react": "11.2.5",
-    "@testing-library/react-hooks": "5.1.0",
+    "@testing-library/react-hooks": "5.1.2",
     "@testing-library/user-event": "13.0.6",
     "autoprefixer": "9.8.6",
     "babel-eslint": "^10.1.0",
