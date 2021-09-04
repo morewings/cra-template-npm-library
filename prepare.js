@@ -15,12 +15,6 @@ Object.entries(pkg.dependencies).forEach(([key, value]) => {
 
 const newPackage = {
   ...pkg,
-  husky: {
-    hooks: {
-      'pre-commit': 'lint-staged',
-      'pre-push': 'CI=true yarn test --passWithNoTests',
-    },
-  },
   dependencies,
   devDependencies,
   peerDependencies: {

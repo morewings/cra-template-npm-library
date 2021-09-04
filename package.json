@@ -105,7 +105,8 @@
     "write:template": "node ./writeTemplateConfig.js",
     "prepublishOnly": "yarn clean:files && yarn copy:files && yarn write:template",
     "start:docs": "docz dev",
-    "build:docs": "docz build"
+    "build:docs": "docz build",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
