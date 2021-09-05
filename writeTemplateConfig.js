@@ -22,7 +22,6 @@ const cleanConfig = (items, excluded) => {
 const dependencies = cleanConfig(
   {
     ...pkg.dependencies,
-    ...pkg.devDependencies,
   },
   excludedPackages
 );
@@ -34,8 +33,18 @@ const template = {
     main: 'lib/index.cjs.js',
     module: 'lib/index.esm.js',
     style: 'lib/default.css',
-    dependencies,
+    files: ['lib'],
+    engines: {
+      node: '>=10',
+    },
+    private: false,
     scripts,
+    dependencies,
+    devDependencies: pkg.devDependencies,
+    peerDependencies: {
+      react: '>=16.8.0',
+      'react-dom': '>=16.8.0',
+    },
   },
 };
 
