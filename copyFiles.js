@@ -14,4 +14,15 @@ const copyFiles = () => {
   });
 };
 
+const renameGitignore = async () => {
+  try {
+    await copy('.gitignore', `${templateDir}/gitignore`, {
+      overwrite: true,
+    });
+  } catch (e) {
+    console.warn('can`t copy gitignore', e);
+  }
+};
+
 copyFiles();
+renameGitignore()
