@@ -23,7 +23,6 @@ Then
 
 ```shell script
 cd %PROJECT_NAME%
-node ./prepare.js # makes required package.json configuration
 yarn start
 ```
 
