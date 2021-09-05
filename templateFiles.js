@@ -14,6 +14,7 @@ module.exports = {
     'README.md',
     'rollup.config.js',
     'public',
+    'prepare.js',
     'src',
   ],
 };
