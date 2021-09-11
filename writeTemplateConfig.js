@@ -38,7 +38,10 @@ const template = {
       node: '>=10',
     },
     private: false,
-    scripts,
+    scripts: {
+      ...scripts,
+      prepare: 'node ./prepare.js && husky install',
+    },
     dependencies,
     devDependencies: pkg.devDependencies,
     peerDependencies: {

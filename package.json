@@ -105,7 +105,7 @@
     "prepublishOnly": "yarn clean:files && yarn copy:files && yarn write:template",
     "start:docs": "docz dev",
     "build:docs": "docz build",
-    "prepare": "node ./prepare.js && husky install"
+    "prepare": "husky installl"
   },
   "eslintConfig": {
     "extends": "react-app"
