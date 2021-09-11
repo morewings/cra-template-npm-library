@@ -88,6 +88,14 @@
           {"zones": [{"target": "./src/lib", "from": "./src/environment"}]}
         ]
       }
+    },
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
     }
   ]
 }
