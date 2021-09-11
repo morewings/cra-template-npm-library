@@ -29,7 +29,5 @@ template.json
 # lib
 /lib/*
 
-# docz
-.docz
-docz-dist
+# documentation
 storybook-static
