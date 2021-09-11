@@ -113,17 +113,7 @@
     "prepare": "husky install"
   },
   "eslintConfig": {
-    "extends": "react-app",
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
