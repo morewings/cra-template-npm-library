@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import useLogic from './useLogic';
 import classes from './Counter.module.css';
 
-const Counter = ({initialValue}) => {
+const Counter = ({initialValue = 0}) => {
   const {count, incrementCount} = useLogic(initialValue);
 
   return (

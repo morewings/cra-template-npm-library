@@ -1,0 +1,21 @@
+import { Meta, Props, Canvas, Story } from '@storybook/addon-docs';
+import Counter from './Counter';
+
+<Meta title="Example/Counter" component={Counter} />
+
+# Example Component Demo
+
+## Counter props
+<Props of={Counter} />
+
+## Description
+
+`Counter` component provides user basic interface to increment counter by one.
+
+## Demo
+
+<Canvas>
+  <Story name="Example Counter">
+    {(args) => <Counter {...args} />}
+  </Story>
+</Canvas>

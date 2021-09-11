@@ -36,7 +36,7 @@ yarn start
 - [Babel](https://babeljs.io/) for transpiling.
 - [Jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) for testing.
 - Supports CSS modules, SASS/SCSS, Less and PostCSS.
-- [Docz](https://www.docz.site/) for documentation and demo.
+- [Storybook](https://storybook.js.org/) for documentation and demo.
 - And [much more](https://cra-template-npm-library.netlify.com/).
 
 ## Contributors
