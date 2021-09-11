@@ -32,3 +32,4 @@ template.json
 # docz
 .docz
 docz-dist
+storybook-static
