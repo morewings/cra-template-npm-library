@@ -7,6 +7,12 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/preset-create-react-app"
+    /**
+     * TODO: disabled until they fix prettier bug
+     * @example
+     * ERROR in Error while loading rule 'prettier/prettier': context.getPhysicalFilename is not a function Occurred while linting /Users/dima/Dev/npm-test/src/lib/Counter/Counter.js
+     *
+     */
+    // "@storybook/preset-create-react-app"
   ]
 }
