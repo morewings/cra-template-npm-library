@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.com/morewings/cra-template-npm-library.svg?branch=master)](https://travis-ci.com/morewings/cra-template-npm-library)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=morewings/cra-template-npm-library)](https://dependabot.com)
 [![dependencies Status](https://david-dm.org/morewings/cra-template-npm-library/status.svg)](https://david-dm.org/morewings/cra-template-npm-library)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7448a6f6-8be5-4d26-b886-f59db21ebb4e/deploy-status)](https://app.netlify.com/sites/cra-template-npm-library/deploys)
 [![npm version](https://badge.fury.io/js/cra-template-npm-library.svg)](https://www.npmjs.com/package/cra-template-npm-library)
