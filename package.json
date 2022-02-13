@@ -82,7 +82,7 @@
     "react-scripts": "4.0.3",
     "recursive-copy": "2.0.13",
     "rimraf": "3.0.2",
-    "rollup": "2.60.2",
+    "rollup": "2.66.1",
     "rollup-plugin-eslint": "7.0.0",
     "rollup-plugin-filesize": "9.1.1",
     "rollup-plugin-includepaths": "0.2.4",
