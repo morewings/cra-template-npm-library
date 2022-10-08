@@ -11,6 +11,8 @@
     "react/jsx-props-no-spreading": 0,
     // Throw warning instead of error when using array index as a key.
     "react/no-array-index-key": 1,
+    // Enforce const `Component = (props) => {}` syntax
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
     // Allow modules with named exports only.
     "import/prefer-default-export": 0,
     // Force {foo: 'bar'} object literal syntax.
