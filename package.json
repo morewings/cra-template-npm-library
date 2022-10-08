@@ -80,7 +80,7 @@
     "postcss-preset-env": "6.7.1",
     "prettier": "2.5.1",
     "react-scripts": "4.0.3",
-    "recursive-copy": "2.0.13",
+    "recursive-copy": "2.0.14",
     "rimraf": "3.0.2",
     "rollup": "2.79.1",
     "rollup-plugin-eslint": "7.0.0",
