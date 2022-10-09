@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import useLogic from './useLogic';
 import classes from './Counter.module.css';
 
-const Counter = ({initialValue = 0}) => {
+export const Counter = ({initialValue = 0}) => {
   const {count, incrementCount} = useLogic(initialValue);
 
   return (
@@ -25,5 +25,3 @@ Counter.propTypes = {
    */
   initialValue: PropTypes.number.isRequired,
 };
-
-export default Counter;
