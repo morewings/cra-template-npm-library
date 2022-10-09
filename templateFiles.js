@@ -12,7 +12,6 @@ module.exports = {
     'babel.config.rollup.js',
     'docs',
     'jsconfig.json',
-    'netlify.toml',
     'README.md',
     'rollup.config.js',
     'public',

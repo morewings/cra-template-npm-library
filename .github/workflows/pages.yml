@@ -41,7 +41,7 @@ jobs:
       - name: Run yarn tasks
         run: |
           yarn install --frozen-lockfile
-          yarn build:docs
+          yarn build:docs --quiet
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
