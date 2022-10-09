@@ -28,7 +28,7 @@ describe('lib > Counter', () => {
     expect(baseElement.querySelector('strong').textContent).toBe('6'); // 6 is value we expect, we need to convert Number to String, because HTMLElement textContent method returns string value
   });
 
-  it('dispatches an action on button click', () => {
+  it('changes counter value on button click', () => {
     const value = 1;
 
     /**
