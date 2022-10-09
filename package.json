@@ -93,6 +93,7 @@
     "rollup-plugin-stylelint": "1.0.0",
     "rollup-plugin-terser": "7.0.2",
     "stylelint": "14.13.0",
+    "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "28.0.0",
     "stylelint-order": "5.0.0"
   },
@@ -105,8 +106,8 @@
     "eject": "react-scripts eject",
     "fix:js": "npx eslint --fix ./src/",
     "lint:js": "npx eslint ./src/",
-    "lint:style": "npx stylelint ./src/",
-    "fix:style": "npx stylelint ./src/ --fix",
+    "lint:style": "npx stylelint ./src/**/*.css",
+    "fix:style": "yarn lint:style --fix",
     "clean:files": "node ./cleanFiles.js",
     "copy:files": "node ./copyFiles.js",
     "write:template": "node ./writeTemplateConfig.js",
