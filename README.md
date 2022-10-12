@@ -4,7 +4,7 @@
 
 # NPM library Create React App template
 
-[Create React App](https://github.com/facebook/create-react-app) (CRA) template to build and publish NPM libraries with **rollup**, **eslint** and **stylelint** configurations. See [full documentation](https://cra-template-npm-library.netlify.com/).
+[Create React App](https://github.com/facebook/create-react-app) (CRA) template to build and publish NPM libraries with **rollup**, **eslint** and **stylelint** configurations. See [full documentation](https://morewings.github.io/cra-template-npm-library).
 
 ## Usage
 
