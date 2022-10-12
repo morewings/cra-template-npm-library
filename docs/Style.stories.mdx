@@ -31,188 +31,110 @@ SASS/SCSS support comes "out of the box" in CRA. To enable it:
 
 1. Install `node-sass`
 
-    ```shell script
-    yarn add node-sass gatsby-plugin-sass --dev
-    ```
+```shell
+yarn add node-sass  --dev
+```
 
 2. Change `.lintstagedrc` to lint `scss` files instead of `css`.
 
-    ```json
-    {
-      "*.js": [
-        "eslint --fix"
-      ],
-      "*.scss": [
-        "stylelint --fix"
-      ]
-    }
-    ```
+```json
+{
+  "*.js": [
+    "eslint --fix"
+  ],
+  "*.scss": [
+    "stylelint --fix"
+  ]
+}
+```
 3. Change `rollup.config.js` to support `scss` files:
 ```js
 postcss({
   extract: process.env.REACT_APP_PKG_STYLE || pkg.style,
   inline: false,
   plugins: postcssPlugins,
-  extensions: ['scss'], // <=== here
-}),
-```
-4. Add scss support to Docz. Create `gatsby-config.js` in the root of project.
-
-```js
-// gatsby-config.js
-module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        // Override the file regex for SASS
-        sassRuleTest: /\.s(a|c)ss$/,
-        // Override the file regex for CSS modules
-        sassRuleModulesTest: /\.module\.s(a|c)ss$/,
-      },
-    },
-  ],
-};
+  extensions: ['scss'] // <=== here
+})
 ```
 
-5. Import `scss` files straight into Component.
+4. Import `scss` files straight into Component.
 
-    ```jsx
-    import React from 'react';
-    import classes from './Component.module.scss'; // note the changed extension
+```jsx
+import React from 'react';
+import classes from './Component.module.scss'; // note the changed extension
 
-    const Component = () => (
-      <div className={classes.wrapper}>Component</div>
-    )
-    ```
+const Component = () => (
+  <div className={classes.wrapper}>Component</div>
+)
+```
 
 You can see all changes required to enable SASS/SCSS in [corresponding PR](https://github.com/morewings/cra-template-npm-library/pull/11).
 
 ## Add PostCSS
 
-1. Install `postcss-cli` and related plugins:
-    ```shell script
-    yarn add --dev postcss-nested postcss-cli postcss-preset-env npm-run-all
-    ```
-2. Modify package scripts:
+`PostCSS` support can be added using **file watcher**.
 
-    ```json
-    {
-        "build:style": "postcss src/**/*.pcss --dir src --base src --ext css",
-        "watch:style": "yarn build:style -w",
-        "start": "npm-run-all -p watch:style start:js",
-        "start:js": "react-scripts start",
-        "build:js": "react-scripts build",
-        "build": "npm-run-all build:style build:js"
-    }
-    ```
-3. Add postcss support to Docz. Create `gatsby-config.js` in the root of project.
+1. Install `postcss-cli` and related packages:
+```shell script
+yarn add --dev postcss-nested postcss-cli postcss-preset-env npm-run-all
+```
+2. Modify package scripts to add file watcher:
 
-   ```js
-   // gatsby-config.js
-   module.exports = {
-     plugins: [`gatsby-plugin-postcss`],
-   };
-   ```
-4. Add `postcss.config.js` file in the root folder. With following configuration:
+```json
+{
+    "build:style": "postcss src/**/*.pcss --dir src --base src --ext css",
+    "watch:style": "yarn build:style -w",
+    "start": "npm-run-all -p watch:style start:js",
+    "start:js": "react-scripts start",
+    "build:js": "react-scripts build",
+    "build": "npm-run-all build:style build:js"
+}
+```
 
-    ```js
-    const pkg = require('./package.json');
+3. Add `postcss.config.js` file in the root folder. With following configuration:
 
-    module.exports = {
-      plugins: [
-        require('postcss-nested'), // handle nested selectors, like LESS or SASS
-        require('postcss-preset-env')({
-          browsers: pkg.browserslist.production, // use browsers list from production mode
-          stage: 1,
-        }),
-      ],
-    };
-    ```
-5. Add rule to `.gitignore` and `.stylelintrc` to ignore all css files, since we are generating them.
+```js
+const pkg = require('./package.json');
 
-    #### .gitignore
+module.exports = {
+  plugins: [
+    require('postcss-nested'), // handle nested selectors, like LESS or SASS
+    require('postcss-preset-env')({
+      browsers: pkg.browserslist.production, // use browsers list from production mode
+      stage: 1
+    })
+  ]
+};
+```
+4. Add rule to `.gitignore` and `.stylelintrc` to ignore all css files, since we are generating them.
 
-    ```gitignore
-    # css
-    *.css
-    ```
+`.gitignore`
 
-   #### .stylelintrc
+```gitignore
+# css
+*.css
+```
 
-   ```json
-    {
-    "ignoreFiles": ["**/*.snap", "**/*.css"]
-    }
-   ```
-6. Change `.lintstagedrc` to lint `pcss` files instead of `css`.
+`.stylelintrc`
 
-    ```json
-    {
-      "*.js": [
-        "eslint --fix"
-      ],
-      "*.pcss": [
-        "stylelint --fix"
-      ]
-    }
-    ```
+```json
+{
+  "ignoreFiles": ["**/*.snap", "**/*.css"]
+}
+```
+
+5. Change `.lintstagedrc` to lint `pcss` files instead of `css`.
+
+ ```json
+ {
+   "*.js": [
+     "eslint --fix"
+   ],
+   "*.pcss": [
+     "stylelint --fix"
+   ]
+ }
+```
+
 
 You can see all changes required to enable PostCSS in [corresponding PR](https://github.com/morewings/cra-template-npm-library/pull/12).
-
-## Add Less
-
-1. Install `less` and related plugins:
-    ```shell script
-    yarn add --dev less less-watch-compiler gatsby-plugin-less npm-run-all
-    ```
-2. Modify package scripts:
-
-    ```json
-    {
-        "build:style": "yarn watch:style --run-once",
-        "watch:style": "less-watch-compiler src src",
-        "start": "npm-run-all -p watch:style start:js",
-        "start:js": "react-scripts start",
-        "build:js": "react-scripts build",
-        "build": "npm-run-all build:style build:js"
-    }
-    ```
-3. Add less support to Docz. Create `gatsby-config.js` in the root of project.
-
-      ```js
-      // gatsby-config.js
-      module.exports = {
-        plugins: [`gatsby-plugin-less`],
-      };
-      ```
-3. Add rule to `.gitignore` and `.stylelintrc` to ignore all css files, since we are generating them.
-
-    #### .gitignore
-
-    ```gitignore
-    # css
-    *.css
-    ```
-
-   #### .stylelintrc
-
-   ```json
-    {
-    "ignoreFiles": ["**/*.snap", "**/*.css"]
-    }
-   ```
-4. Change `.lintstagedrc` to lint `less` files instead of `css`.
-
-    ```json
-    {
-      "*.js": [
-        "eslint --fix"
-      ],
-      "*.less": [
-        "stylelint --fix"
-      ]
-    }
-    ```
-
-You can see all changes required to enable Less in [corresponding PR](https://github.com/morewings/cra-template-npm-library/pull/10).

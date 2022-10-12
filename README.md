@@ -1,6 +1,4 @@
 [![Build Status](https://travis-ci.com/morewings/cra-template-npm-library.svg?branch=master)](https://travis-ci.com/morewings/cra-template-npm-library)
-[![dependencies Status](https://david-dm.org/morewings/cra-template-npm-library/status.svg)](https://david-dm.org/morewings/cra-template-npm-library)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7448a6f6-8be5-4d26-b886-f59db21ebb4e/deploy-status)](https://app.netlify.com/sites/cra-template-npm-library/deploys)
 [![npm version](https://badge.fury.io/js/cra-template-npm-library.svg)](https://www.npmjs.com/package/cra-template-npm-library)
 [![npm](https://img.shields.io/npm/dm/cra-template-npm-library)](https://www.npmjs.com/package/cra-template-npm-library)
 
@@ -34,7 +32,7 @@ yarn start
 - [Rollup](https://rollupjs.org/guide/en/) for bundling.
 - [Babel](https://babeljs.io/) for transpiling.
 - [Jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) for testing.
-- Supports CSS modules, SASS/SCSS, Less and PostCSS.
+- Supports CSS modules, SASS/SCSS and PostCSS.
 - [Storybook](https://storybook.js.org/) for documentation and demo.
 - And [much more](https://cra-template-npm-library.netlify.com/).
 
