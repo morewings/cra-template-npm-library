@@ -35,7 +35,7 @@ const template = {
     style: 'lib/default.css',
     files: ['lib'],
     engines: {
-      node: '>=10',
+      node: '>=14',
     },
     private: false,
     scripts: {
