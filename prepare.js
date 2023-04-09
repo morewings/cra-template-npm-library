@@ -1,3 +1,4 @@
+// TODO: investigate if this script needed
 const fs = require('fs');
 const pkg = require('./package.json');
 
