@@ -51,7 +51,7 @@
     "@rollup/plugin-babel": "6.0.3",
     "@rollup/plugin-commonjs": "24.0.1",
     "@rollup/plugin-node-resolve": "15.0.1",
-    "@storybook/addon-actions": "6.5.16",
+    "@storybook/addon-actions": "7.0.24",
     "@storybook/addon-essentials": "6.5.16",
     "@storybook/addon-links": "6.5.16",
     "@storybook/builder-webpack5": "6.5.16",
