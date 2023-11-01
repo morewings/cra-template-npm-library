@@ -52,7 +52,7 @@
     "@rollup/plugin-commonjs": "25.0.2",
     "@rollup/plugin-node-resolve": "15.0.1",
     "@storybook/addon-actions": "6.5.16",
-    "@storybook/addon-essentials": "6.5.16",
+    "@storybook/addon-essentials": "7.5.2",
     "@storybook/addon-links": "6.5.16",
     "@storybook/builder-webpack5": "6.5.16",
     "@storybook/manager-webpack5": "6.5.16",
