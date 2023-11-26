@@ -11,7 +11,7 @@ module.exports = {
     '.husky',
     'babel.config.rollup.js',
     'docs',
-    'jsconfig.json',
+    'tsconfig.json',
     'README.md',
     'rollup.config.js',
     'public',

@@ -74,7 +74,14 @@ module.exports = {
   overrides: [
     {
       /* Allow devDependencies imports for tests and config files */
-      files: ['**/*.spec.*', '**/testUtils/*.*', '**/*.js'],
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 0,
+      },
+    },
+    {
+      /* Allow devDependencies imports for tests and config files */
+      files: ['**/*.spec.*', '**/testUtils/*.*', '**/*.js', '**/setupTests.ts'],
       rules: {
         'import/no-extraneous-dependencies': [
           'error',
@@ -87,3 +94,4 @@ module.exports = {
     },
   ],
 };
+// @typescript-eslint/no-var-requires

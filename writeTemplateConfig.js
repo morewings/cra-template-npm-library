@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 const pkg = require('./package.json');
 
 const excludedPackages = ['react', 'react-dom', 'react-scripts'];

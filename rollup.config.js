@@ -8,6 +8,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import autoprefixer from 'autoprefixer';
 import postcssPresetEnv from 'postcss-preset-env';
 import {terser} from 'rollup-plugin-terser';
+
 import pkg from './package.json';
 
 const outputs = [
