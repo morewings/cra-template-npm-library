@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import useLogic from './useLogic';
 import classes from './Counter.module.css';
 

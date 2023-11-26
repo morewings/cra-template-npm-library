@@ -1,5 +1,6 @@
 import React from 'react';
-import {Counter} from 'lib';
+import {Counter} from 'lib/index';
+
 import classes from './App.module.css';
 
 export const App = () => (

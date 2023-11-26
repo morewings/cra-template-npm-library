@@ -1,4 +1,5 @@
 const copy = require('recursive-copy');
+
 const {files, templateDir} = require('./templateFiles');
 
 const copyFiles = () => {
@@ -25,4 +26,4 @@ const renameGitignore = async () => {
 };
 
 copyFiles();
-renameGitignore()
+renameGitignore();
