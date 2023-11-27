@@ -46,8 +46,8 @@ const template = {
     dependencies,
     devDependencies: pkg.devDependencies,
     peerDependencies: {
-      react: '>=16.8.0',
-      'react-dom': '>=16.8.0',
+      react: '>=18.2.0',
+      'react-dom': '>=18.2.0',
     },
   },
 };

@@ -37,9 +37,7 @@
     "url": "https://github.com/morewings/cra-template-npm-library/issues"
   },
   "dependencies": {
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@babel/cli": "7.22.5",
@@ -51,6 +49,7 @@
     "@rollup/plugin-babel": "6.0.3",
     "@rollup/plugin-commonjs": "25.0.2",
     "@rollup/plugin-node-resolve": "15.0.1",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-actions": "6.5.16",
     "@storybook/addon-essentials": "6.5.16",
     "@storybook/addon-links": "6.5.16",
@@ -63,11 +62,12 @@
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
     "@types/jest": "27.0.1",
+    "@types/lodash": "^4.14.202",
     "@types/node": "16.7.13",
-    "@types/prop-types": "15.7.11",
     "@types/react": "18.0.0",
     "@types/react-dom": "18.0.0",
     "@typescript-eslint/parser": "6.12.0",
+    "@yelo/rollup-node-external": "^1.0.1",
     "autoprefixer": "9.8.8",
     "babel-eslint": "10.1.0",
     "eslint": "8.37.0",
@@ -90,10 +90,13 @@
     "npm-run-all": "4.1.5",
     "postcss-preset-env": "8.3.0",
     "prettier": "2.8.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-scripts": "5.0.1",
     "recursive-copy": "2.0.14",
     "rimraf": "4.4.1",
-    "rollup": "2.79.1",
+    "rollup": "3.29.4",
+    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-eslint": "7.0.0",
     "rollup-plugin-filesize": "10.0.0",
     "rollup-plugin-includepaths": "0.2.4",
@@ -103,18 +106,24 @@
     "stylelint": "15.11.0",
     "stylelint-config-standard": "34.0.0",
     "stylelint-order": "6.0.3",
-    "typescript": "4.4.2"
+    "typescript": "4.8.4"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:lib": "rollup -c",
+    "clean:lib": "rm -rf dist",
+    "compile:lib": "rollup -c",
+    "build:lib": "run-s clean:lib compile:lib",
     "build:lib:local": "REACT_APP_PKG_MAIN=lib/index.cjs.js REACT_APP_PKG_MODULE=lib/index.esm.js REACT_APP_PKG_STYLE=lib/default.css run-s build:lib",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint:js": "eslint ./src/",
     "fix:js": "run-s 'lint:js --fix'",
-    "lint:tsc": "tsc --pretty --noEmit",
+    "lint:types": "tsc --pretty --noEmit",
     "lint:style": "stylelint ./src/**/*.css",
     "fix:style": "run-s 'lint:style --fix'",
     "clean:files": "node ./cleanFiles.js",

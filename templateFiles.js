@@ -2,7 +2,7 @@ module.exports = {
   templateDir: './template',
   files: [
     '.env',
-    '.eslintrc',
+    '.eslintrc.cjs',
     '.lintstagedrc',
     '.nvmrc',
     '.prettierrc',
@@ -13,7 +13,7 @@ module.exports = {
     'docs',
     'tsconfig.json',
     'README.md',
-    'rollup.config.js',
+    'rollup.config.cjs',
     'public',
     'prepare.js',
     'src',
