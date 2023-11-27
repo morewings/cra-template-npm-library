@@ -1,10 +1,10 @@
+import type {FC} from 'react';
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import useLogic from './useLogic';
 import classes from './Counter.module.css';
 
-export const Counter = ({initialValue = 0}) => {
+export const Counter: FC<{initialValue?: number}> = ({initialValue = 0}) => {
   const {count, incrementCount} = useLogic(initialValue);
 
   return (
@@ -18,11 +18,4 @@ export const Counter = ({initialValue = 0}) => {
       </div>
     </div>
   );
-};
-
-Counter.propTypes = {
-  /**
-   * Define initial value for the Counter
-   */
-  initialValue: PropTypes.number.isRequired,
 };
