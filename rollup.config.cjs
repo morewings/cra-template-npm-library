@@ -26,7 +26,7 @@ module.exports = [
     external: external(),
     plugins: [
       postcss({
-        extract: true,
+        extract: 'style.css',
         inline: false,
         modules: true,
         plugins: [
