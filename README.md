@@ -45,7 +45,3 @@ npm run prepare
 yarn run prepare
 pnpm run prepare
 ```
-
-## Contributors
-
-@morewings, @sky0matic
