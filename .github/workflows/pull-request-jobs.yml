@@ -39,4 +39,4 @@ jobs:
           pnpm run test --silent
           pnpm run start --smoke-test
           pnpm run start:docs --smoke-test --quiet
-          pnpm:run build:lib
+          pnpm run build:lib
