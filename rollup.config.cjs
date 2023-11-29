@@ -4,6 +4,8 @@ const postcssPresetEnv = require("postcss-preset-env");
 const typescript = require("@rollup/plugin-typescript");
 const external = require("@yelo/rollup-node-external");
 const { dts } = require("rollup-plugin-dts");
+const postcssSass = require('@csstools/postcss-sass');
+const postcssSassSyntax = require('postcss-scss');
 
 module.exports = [
   {
@@ -29,7 +31,9 @@ module.exports = [
         extract: "style.css",
         inline: false,
         modules: true,
+        syntax: postcssSassSyntax,
         plugins: [
+          postcssSass(),
           postcssPresetEnv({
             browsers: [">0.2%", "not dead", "not op_mini all"],
             stage: 3,
