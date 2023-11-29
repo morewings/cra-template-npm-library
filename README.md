@@ -23,7 +23,6 @@ Visit [Demo Storybook](https://morewings.github.io/cra-template-npm-library).
 - [Husky](https://github.com/typicode/husky) for git hooks.
 - [Eslint](https://eslint.org/) and [stylelint](https://stylelint.io/).
 - [Rollup](https://rollupjs.org/guide/en/) for bundling.
-- [Babel](https://babeljs.io/) for transpiling.
 - [Jest](https://jestjs.io/) and [react-testing-library](https://testing-library.com/docs/react-testing-library/intro) for testing.
 - Supports CSS modules, SASS/SCSS and PostCSS.
 - [Storybook](https://storybook.js.org/) for documentation and demo.
