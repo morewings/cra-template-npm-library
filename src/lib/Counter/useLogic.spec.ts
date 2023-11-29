@@ -1,4 +1,5 @@
 import {renderHook, act} from '@testing-library/react';
+
 import useLogic from './useLogic';
 
 describe('lib > Counter > useLogic', () => {

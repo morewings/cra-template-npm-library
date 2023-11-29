@@ -1,10 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import type {FC} from 'react';
+import React, {useEffect} from 'react';
+import {throttle} from 'lodash';
+
 import useLogic from './useLogic';
 import classes from './Counter.module.css';
 
-export const Counter = ({initialValue = 0}) => {
+export type Props = {
+  /** Set initial value */
+  initialValue?: number;
+};
+
+export const Counter: FC<Props> = ({initialValue = 0}) => {
   const {count, incrementCount} = useLogic(initialValue);
+
+  useEffect(() => {
+    const runner = throttle(() => {
+      console.log('throttle');
+    }, 10);
+    runner();
+  }, []);
 
   return (
     <div className={classes.counter}>
@@ -17,11 +31,4 @@ export const Counter = ({initialValue = 0}) => {
       </div>
     </div>
   );
-};
-
-Counter.propTypes = {
-  /**
-   * Define initial value for the Counter
-   */
-  initialValue: PropTypes.number.isRequired,
 };

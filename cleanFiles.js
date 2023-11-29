@@ -1,4 +1,5 @@
 const rimraf = require('rimraf');
+
 const {files, templateDir} = require('./templateFiles');
 
 const cleanDir = () => {
