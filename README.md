@@ -5,13 +5,16 @@
 
 # NPM library Create React App template
 
+<img src="./design/banner.png" alt="NPM library Create React App template logo"/>
+
+
 [Create React App](https://github.com/facebook/create-react-app) (CRA) template to build and publish NPM libraries with **rollup**, **eslint** and **stylelint** configurations.
 
 🎁👌🤓 **NEW!** Now with **Typescript** support.
 
 Read [full documentation](https://github.com/morewings/cra-template-npm-library/wiki).
 
-Visit [Storybook Demo](https://morewings.github.io/cra-template-npm-library).
+Visit [Demo Storybook](https://morewings.github.io/cra-template-npm-library).
 
 ## Features
 
