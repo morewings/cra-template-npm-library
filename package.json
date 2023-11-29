@@ -19,9 +19,10 @@
     "library",
     "babel",
     "publish",
-    "create-react-library"
+    "create-react-library",
+    "typescript"
   ],
-  "description": "Create React App template to build and publish NPM libraries with rollup, eslint and stylelint",
+  "description": "Create React App template to build and publish NPM libraries with Typescript support, and rollup, eslint and stylelint configurations",
   "main": "template.json",
   "module": "dist/index.esm.js",
   "style": "dist/style.css",

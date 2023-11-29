@@ -5,7 +5,7 @@
 
 # NPM library Create React App template
 
-<img src="./design/banner.png" alt="NPM library Create React App template logo"/>
+[![NPM library Create React App template logo](./design/banner.png)](#)
 
 
 [Create React App](https://github.com/facebook/create-react-app) (CRA) template to build and publish NPM libraries with **rollup**, **eslint** and **stylelint** configurations.
