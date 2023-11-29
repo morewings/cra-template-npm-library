@@ -4,12 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  source-map@^0.7.0: 0.7.4
+
 dependencies:
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
 
 devDependencies:
+  '@csstools/postcss-sass':
+    specifier: 5.0.1
+    version: 5.0.1(postcss@8.4.31)
   '@rollup/plugin-typescript':
     specifier: 11.1.5
     version: 11.1.5(rollup@3.29.4)(typescript@4.8.4)
@@ -115,6 +121,9 @@ devDependencies:
   postcss-preset-env:
     specifier: 9.3.0
     version: 9.3.0(postcss@8.4.31)
+  postcss-scss:
+    specifier: 4.0.9
+    version: 4.0.9(postcss@8.4.31)
   prettier:
     specifier: 2.8.7
     version: 2.8.7
@@ -126,7 +135,7 @@ devDependencies:
     version: 18.2.0(react@18.2.0)
   react-scripts:
     specifier: 5.0.1
-    version: 5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(@swc/core@1.3.99)(esbuild@0.18.20)(eslint-import-resolver-typescript@3.6.1)(eslint@8.54.0)(react@18.2.0)(typescript@4.8.4)
+    version: 5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(@swc/core@1.3.99)(esbuild@0.18.20)(eslint-import-resolver-typescript@3.6.1)(eslint@8.54.0)(react@18.2.0)(sass@1.69.5)(typescript@4.8.4)
   recursive-copy:
     specifier: 2.0.14
     version: 2.0.14
@@ -145,6 +154,9 @@ devDependencies:
   rollup-plugin-postcss:
     specifier: 4.0.2
     version: 4.0.2(postcss@8.4.31)
+  sass:
+    specifier: 1.69.5
+    version: 1.69.5
   storybook:
     specifier: 7.5.3
     version: 7.5.3
@@ -2293,6 +2305,18 @@ packages:
       postcss: 8.4.31
     dev: true
 
+  /@csstools/postcss-sass@5.0.1(postcss@8.4.31):
+    resolution: {integrity: sha512-GgQAOe6KfABEIHGh9KFqn/7sX2Dmx554PElvyhRFNADo2QV2N/CzlS+QHrrJmVJzaBn829f4JFcOd67mmYb5Eg==}
+    engines: {node: ^12 || ^14 || >=16}
+    peerDependencies:
+      postcss: ^8.4.6
+    dependencies:
+      '@csstools/sass-import-resolve': 1.0.0
+      postcss: 8.4.31
+      sass: 1.69.5
+      source-map: 0.7.4
+    dev: true
+
   /@csstools/postcss-scope-pseudo-class@3.0.0(postcss@8.4.31):
     resolution: {integrity: sha512-GFNVsD97OuEcfHmcT0/DAZWAvTM/FFBDQndIOLawNc1Wq8YqpZwBdHa063Lq+Irk7azygTT+Iinyg3Lt76p7rg==}
     engines: {node: ^14 || ^16 || >=18}
@@ -2384,6 +2408,11 @@ packages:
       postcss: ^8.4
     dependencies:
       postcss: 8.4.31
+    dev: true
+
+  /@csstools/sass-import-resolve@1.0.0:
+    resolution: {integrity: sha512-pH4KCsbtBLLe7eqUrw8brcuFO8IZlN36JjdKlOublibVdAIPHCzEnpBWOVUXK5sCf+DpBi8ZtuWtjF0srybdeA==}
+    engines: {node: '>=4.0.0'}
     dev: true
 
   /@csstools/selector-specificity@2.1.1(postcss-selector-parser@6.0.13)(postcss@8.4.25):
@@ -3155,7 +3184,7 @@ packages:
       loader-utils: 2.0.4
       react-refresh: 0.11.0
       schema-utils: 3.3.0
-      source-map: 0.7.3
+      source-map: 0.7.4
       webpack: 5.89.0(@swc/core@1.3.99)(esbuild@0.18.20)
       webpack-dev-server: 4.11.1(webpack@5.89.0)
     dev: true
@@ -4645,7 +4674,7 @@ packages:
       '@storybook/types': 7.6.1
       '@types/babel__core': 7.1.19
       pnp-webpack-plugin: 1.7.0(typescript@4.8.4)
-      react-scripts: 5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(@swc/core@1.3.99)(esbuild@0.18.20)(eslint-import-resolver-typescript@3.6.1)(eslint@8.54.0)(react@18.2.0)(typescript@4.8.4)
+      react-scripts: 5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(@swc/core@1.3.99)(esbuild@0.18.20)(eslint-import-resolver-typescript@3.6.1)(eslint@8.54.0)(react@18.2.0)(sass@1.69.5)(typescript@4.8.4)
       semver: 7.5.4
     transitivePeerDependencies:
       - '@types/webpack'
@@ -10247,6 +10276,10 @@ packages:
     resolution: {integrity: sha512-2eB/sswms9AEUSkOm4SbV5Y7Vmt/bKRwByd52jfLkW4OLYeaTP3EEiJ9agqU0O/tq6Dk62Zfj+TJSqfm1rLVGQ==}
     dev: true
 
+  /immutable@4.3.4:
+    resolution: {integrity: sha512-fsXeu4J4i6WNWSikpI88v/PcVflZz+6kMhUfIwc5SY+poQRPnaf5V7qds6SUyUN3cVxEzuCab7QIoLOQ+DQ1wA==}
+    dev: true
+
   /import-cwd@3.0.0:
     resolution: {integrity: sha512-4pnzH16plW+hgvRECbDWpQl3cqtvSofHWh44met7ESfZ8UZOWWddm8hEyDTqREJ9RbYHY8gi8DqmaelApoOGMg==}
     engines: {node: '>=8'}
@@ -14119,6 +14152,15 @@ packages:
       postcss: 8.4.31
     dev: true
 
+  /postcss-scss@4.0.9(postcss@8.4.31):
+    resolution: {integrity: sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.4.29
+    dependencies:
+      postcss: 8.4.31
+    dev: true
+
   /postcss-selector-not@6.0.1(postcss@8.4.25):
     resolution: {integrity: sha512-1i9affjAe9xu/y9uqWH+tD4r6/hDaXJruk8xn2x1vzxC2U3J3LKO3zJW4CyxlNhA56pADJ/djpEwpH1RClI2rQ==}
     engines: {node: ^12 || ^14 || >=16}
@@ -14634,7 +14676,7 @@ packages:
       use-sidecar: 1.1.2(@types/react@18.0.0)(react@18.2.0)
     dev: true
 
-  /react-scripts@5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(@swc/core@1.3.99)(esbuild@0.18.20)(eslint-import-resolver-typescript@3.6.1)(eslint@8.54.0)(react@18.2.0)(typescript@4.8.4):
+  /react-scripts@5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(@swc/core@1.3.99)(esbuild@0.18.20)(eslint-import-resolver-typescript@3.6.1)(eslint@8.54.0)(react@18.2.0)(sass@1.69.5)(typescript@4.8.4):
     resolution: {integrity: sha512-8VAmEm/ZAwQzJ+GOMLbBsTdDKOpuZh7RPs0UymvBR2vRk4iZWCskjbFnxqjrzoIvlNNRZ3QJFx6/qDSi6zSnaQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -14684,7 +14726,7 @@ packages:
       react-refresh: 0.11.0
       resolve: 1.22.1
       resolve-url-loader: 4.0.0
-      sass-loader: 12.6.0(webpack@5.89.0)
+      sass-loader: 12.6.0(sass@1.69.5)(webpack@5.89.0)
       semver: 7.5.4
       source-map-loader: 3.0.1(webpack@5.89.0)
       style-loader: 3.3.1(webpack@5.89.0)
@@ -15272,7 +15314,7 @@ packages:
     resolution: {integrity: sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==}
     dev: true
 
-  /sass-loader@12.6.0(webpack@5.89.0):
+  /sass-loader@12.6.0(sass@1.69.5)(webpack@5.89.0):
     resolution: {integrity: sha512-oLTaH0YCtX4cfnJZxKSLAyglED0naiYfNG1iXfU5w1LNZ+ukoA5DtyDIN5zmKVZwYNJP4KRc5Y3hkWga+7tYfA==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
@@ -15293,7 +15335,18 @@ packages:
     dependencies:
       klona: 2.0.5
       neo-async: 2.6.2
+      sass: 1.69.5
       webpack: 5.89.0(@swc/core@1.3.99)(esbuild@0.18.20)
+    dev: true
+
+  /sass@1.69.5:
+    resolution: {integrity: sha512-qg2+UCJibLr2LCVOt3OlPhr/dqVHWOa9XtZf2OjbLs/T4VPSJ00udtgJxH3neXZm+QqX8B+3cU7RaLqp1iVfcQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.4
+      source-map-js: 1.0.2
     dev: true
 
   /sax@1.2.4:
@@ -15608,8 +15661,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /source-map@0.7.3:
-    resolution: {integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==}
+  /source-map@0.7.4:
+    resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
     engines: {node: '>= 8'}
     dev: true
 
@@ -16853,7 +16906,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.3
       convert-source-map: 1.8.0
-      source-map: 0.7.3
+      source-map: 0.7.4
     dev: true
 
   /v8-to-istanbul@9.2.0:

@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import {throttle} from 'lodash';
 
 import useLogic from './useLogic';
-import classes from './Counter.module.css';
+import classes from './Counter.module.scss';
 
 export type Props = {
   /** Set initial value */
