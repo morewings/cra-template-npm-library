@@ -5,7 +5,7 @@ module.exports = {
     '.eslintrc.cjs',
     '.lintstagedrc',
     '.nvmrc',
-    // '.storybook',
+    '.storybook',
     '.stylelintrc',
     '.husky',
     // 'docs',

@@ -34,7 +34,7 @@ jobs:
       - name: Run tasks
         run: |
           pnpm install
-          pnpm run lint:js --quiet
+          pnpm run lint:code --quiet
           pnpm run lint:style --quiet
           pnpm run test --silent
           pnpm run start --smoke-test

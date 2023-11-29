@@ -31,10 +31,11 @@ const scripts = cleanConfig({...pkg.scripts}, excludedScripts);
 
 const template = {
   package: {
-    main: 'lib/index.cjs.js',
-    module: 'lib/index.esm.js',
-    style: 'lib/default.css',
-    files: ['lib'],
+    main: 'dist/index.cjs.js',
+    module: 'dist/index.esm.js',
+    style: 'dist/style.css',
+    types: 'dist/types.d.ts',
+    files: ['dist'],
     engines: {
       node: '>=14',
     },

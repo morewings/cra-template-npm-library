@@ -5,8 +5,6 @@
   "engines": {
     "node": ">=14"
   },
-  "description": "Create React App template to build and publish NPM libraries with rollup, eslint and stylelint",
-  "main": "template.json",
   "keywords": [
     "react",
     "create-react-app",
@@ -23,6 +21,11 @@
     "publish",
     "create-react-library"
   ],
+  "description": "Create React App template to build and publish NPM libraries with rollup, eslint and stylelint",
+  "main": "template.json",
+  "module": "dist/index.esm.js",
+  "style": "dist/style.css",
+  "types": "dist/types.d.ts",
   "files": [
     "template",
     "template.json"
@@ -57,6 +60,7 @@
     "@types/node": "16.7.13",
     "@types/react": "18.0.0",
     "@types/react-dom": "18.0.0",
+    "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.12.0",
     "@yelo/rollup-node-external": "1.0.1",
     "autoprefixer": "9.8.8",
