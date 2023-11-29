@@ -38,5 +38,5 @@ jobs:
           pnpm run lint:style --quiet
           pnpm run test --silent
           pnpm run start --smoke-test
-#          pnpm run start:docs --smoke-test --quiet
-#          yarn build:lib:local --silent
+          pnpm run start:docs --smoke-test --quiet
+          pnpm:run build:lib

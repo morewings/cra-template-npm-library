@@ -1,11 +1,6 @@
 module.exports = {
   root: true,
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:ssr-friendly/recommended',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:ssr-friendly/recommended', 'plugin:storybook/recommended', 'plugin:prettier/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -81,7 +76,7 @@ module.exports = {
     },
     {
       /* Allow devDependencies imports for tests and config files */
-      files: ['**/*.spec.*', '**/testUtils/*.*', '**/*.js', '**/setupTests.ts'],
+      files: ['**/*.spec.*', '**/testUtils/*.*', '**/*.js', '**/setupTests.ts', '**/*.stories.*'],
       rules: {
         'import/no-extraneous-dependencies': [
           'error',

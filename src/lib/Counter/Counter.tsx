@@ -5,7 +5,12 @@ import {throttle} from 'lodash';
 import useLogic from './useLogic';
 import classes from './Counter.module.css';
 
-export const Counter: FC<{initialValue?: number}> = ({initialValue = 0}) => {
+export type Props = {
+  /** Set initial value */
+  initialValue?: number;
+};
+
+export const Counter: FC<Props> = ({initialValue = 0}) => {
   const {count, incrementCount} = useLogic(initialValue);
 
   useEffect(() => {
