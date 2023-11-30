@@ -2,7 +2,7 @@
   "*.{js,ts,tsx}": [
     "eslint --fix"
   ],
-  "*.css": [
+  "*.style.ts": [
     "stylelint --fix --quiet"
   ]
 }

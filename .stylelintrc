@@ -1,5 +1,6 @@
 {
   "extends": ["stylelint-config-standard"],
+  "customSyntax": "postcss-styled-syntax",
   "rules": {
     "function-calc-no-unspaced-operator": true,
     "order/order": [

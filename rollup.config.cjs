@@ -28,7 +28,7 @@ module.exports = [
       postcss({
         extract: 'style.css',
         inline: false,
-        modules: true,
+        modules: false,
         plugins: [
           postcssPresetEnv({
             browsers: ['>0.2%', 'not dead', 'not op_mini all'],

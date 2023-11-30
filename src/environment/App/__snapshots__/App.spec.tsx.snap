@@ -2,19 +2,53 @@
 
 exports[`environment > App renders without crashing 1`] = `
 <DocumentFragment>
-  <div
+  .c0 {
+  border: 1px solid lightgray;
+  font-family: sans-serif;
+  margin: 36px 24px;
+  padding: 24px;
+  text-align: center;
+  width: 240px;
+}
+
+.c1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 12px;
+}
+
+.c2 {
+  background: lightseagreen;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto 24px;
+  padding: 12px 24px;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+}
+
+.c2:active {
+  left: 1px;
+  position: relative;
+  top: 1px;
+}
+
+<div
     class="container"
   >
     <div
-      class="counter"
+      class="c0"
     >
       <h2
-        class="header"
+        class="c1"
       >
         Counter
       </h2>
       <button
-        class="button"
+        class="c2"
         type="button"
       >
         Increment by one
