@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import {throttle} from 'lodash';
 
 import useLogic from './useLogic';
-import classes from './Counter.module.css';
+import {Container, Header, Button} from './Counter.style';
 
 export type Props = {
   /** Set initial value */
@@ -21,14 +21,14 @@ export const Counter: FC<Props> = ({initialValue = 0}) => {
   }, []);
 
   return (
-    <div className={classes.counter}>
-      <h2 className={classes.header}>Counter</h2>
-      <button className={classes.button} type="button" onClick={incrementCount}>
+    <Container>
+      <Header>Counter</Header>
+      <Button type="button" onClick={incrementCount}>
         Increment by one
-      </button>
+      </Button>
       <div>
         Total value: <strong>{count}</strong>
       </div>
-    </div>
+    </Container>
   );
 };
