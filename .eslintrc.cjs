@@ -1,6 +1,13 @@
 module.exports = {
   root: true,
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:ssr-friendly/recommended', 'plugin:storybook/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:ssr-friendly/recommended',
+    'plugin:storybook/recommended',
+    'plugin:tailwindcss/recommended',
+    'plugin:prettier/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -16,7 +23,10 @@ module.exports = {
      * Allow empty arrow functions `() => {}`, while keeping other empty functions restricted
      * @see https://eslint.org/docs/latest/rules/no-empty-function#allow-arrowfunctions
      */
-    '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+    '@typescript-eslint/no-empty-function': [
+      'error',
+      {allow: ['arrowFunctions']},
+    ],
     '@typescript-eslint/ban-ts-comment': 1,
     'no-const-assign': 'error',
     /** Restrict imports from devDependencies since they are not included in library build. peerDependencies are ok */
@@ -24,8 +34,8 @@ module.exports = {
       'error',
       {
         devDependencies: false,
-        peerDependencies: true
-      }
+        peerDependencies: true,
+      },
     ],
     /**
      * Enforce import order with empty lines between import group
@@ -38,16 +48,16 @@ module.exports = {
           'builtin',
           'external',
           'internal',
-          ['parent', 'sibling', 'index']
+          ['parent', 'sibling', 'index'],
         ],
         pathGroups: [
           {
             pattern: '@/**',
-            group: 'internal'
-          }
+            group: 'internal',
+          },
         ],
-        'newlines-between': 'always'
-      }
+        'newlines-between': 'always',
+      },
     ],
     /**
      * Disallow combined module and type imports like this `import React, {FC} from 'react'`.
@@ -56,27 +66,37 @@ module.exports = {
      */
     '@typescript-eslint/consistent-type-imports': 'error',
     'import/no-cycle': 'error',
-    'prettier/prettier': ['error', {
-      "semi": true,
-      "singleQuote": true,
-      "jsxSingleQuote": false,
-      "trailingComma": "es5",
-      "bracketSpacing": false,
-      "jsxBracketSameLine": true,
-      "arrowParens": "avoid"
-    }]
+    'prettier/prettier': [
+      'error',
+      {
+        semi: true,
+        singleQuote: true,
+        jsxSingleQuote: false,
+        trailingComma: 'es5',
+        bracketSpacing: false,
+        jsxBracketSameLine: true,
+        arrowParens: 'avoid',
+      },
+    ],
   },
   overrides: [
     {
       /* Allow devDependencies imports for tests and config files */
-      files: ['*.js'],
+      files: ['*.js', '*.cjs'],
       rules: {
         '@typescript-eslint/no-var-requires': 0,
       },
     },
     {
       /* Allow devDependencies imports for tests and config files */
-      files: ['**/*.spec.*', '**/testUtils/*.*', '**/*.js', '**/setupTests.ts', '**/*.stories.*'],
+      files: [
+        '**/*.spec.*',
+        '**/testUtils/*.*',
+        '**/*.js',
+        '*.cjs',
+        '**/setupTests.ts',
+        '**/*.stories.*',
+      ],
       rules: {
         'import/no-extraneous-dependencies': [
           'error',

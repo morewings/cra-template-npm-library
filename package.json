@@ -41,7 +41,8 @@
     "url": "https://github.com/morewings/cra-template-npm-library/issues"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "tailwindcss": "^3.3.5"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "11.1.5",
@@ -73,11 +74,13 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-ssr-friendly": "1.2.0",
     "eslint-plugin-storybook": "0.6.15",
+    "eslint-plugin-tailwindcss": "^3.13.0",
     "husky": "8.0.3",
     "identity-obj-proxy": "^3.0.0",
     "is-ci": "3.0.1",
     "lint-staged": "15.1.0",
     "npm-run-all": "4.1.5",
+    "postcss-import": "^15.1.0",
     "postcss-preset-env": "9.3.0",
     "prettier": "2.8.7",
     "react": "18.2.0",
@@ -89,6 +92,8 @@
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "rollup-plugin-postcss": "4.0.2",
+    "rollup-plugin-tailwindcss": "^1.0.0",
+    "rollup-plugin-typescript2": "^0.36.0",
     "storybook": "7.5.3",
     "stylelint": "15.11.0",
     "stylelint-config-standard": "34.0.0",

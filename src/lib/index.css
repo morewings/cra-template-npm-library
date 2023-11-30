@@ -1,0 +1,10 @@
+/**
+  TODO: this is where rollup fails.
+  [!] RollupError: Unexpected character '@' (Note that you need plugins to import files that are not JavaScript)
+ */
+
+/* @tailwind("tailwindcss/base"); */
+
+/* @tailwind("tailwindcss/components"); */
+
+/* @tailwind("tailwindcss/utilities"); */
