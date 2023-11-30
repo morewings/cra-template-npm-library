@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
           cache: 'pnpm'
-      - name: Run tasks
+      - name: Run test tasks
         run: |
           pnpm install
           pnpm run lint:code --quiet
