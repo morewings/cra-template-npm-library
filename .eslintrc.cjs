@@ -51,7 +51,11 @@ module.exports = {
         ],
         pathGroups: [
           {
-            pattern: '@/**',
+            pattern: 'lib/**',
+            group: 'internal',
+          },
+          {
+            pattern: 'environment/**',
             group: 'internal',
           },
         ],
@@ -76,18 +80,18 @@ module.exports = {
         jsxBracketSameLine: true,
         arrowParens: 'avoid',
       },
-    ],
+    ]
   },
   overrides: [
+    /* Allow require imports for internal scripts */
     {
-      /* Allow devDependencies imports for tests and config files */
       files: ['*.js', '*.cjs'],
       rules: {
         '@typescript-eslint/no-var-requires': 0,
       },
     },
+    /* Allow devDependencies imports for tests and config files */
     {
-      /* Allow devDependencies imports for tests and config files */
       files: [
         '**/*.spec.*',
         '**/testUtils/*.*',
@@ -106,6 +110,22 @@ module.exports = {
         ],
       },
     },
+    /* Disable `environment` directory imports for library files */
+    {
+      files: ['./src/lib/**/*.*'],
+      rules: {
+        'no-restricted-imports': [
+          'error',
+          {
+            patterns: [
+              {
+                "group": ['**/environment/**'],
+                "message": "Imports from environment directory are forbidden in the library files."
+              }
+            ],
+          },
+        ]
+      }
+    }
   ],
 };
-// @typescript-eslint/no-var-requires
