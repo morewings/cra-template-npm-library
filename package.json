@@ -84,7 +84,7 @@
     "react-dom": "18.2.0",
     "react-scripts": "5.0.1",
     "recursive-copy": "2.0.14",
-    "rimraf": "4.4.1",
+    "rimraf": "5.0.5",
     "rollup": "3.29.4",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-postcss": "4.0.2",
