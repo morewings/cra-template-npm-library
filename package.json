@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "11.1.5",
-    "@storybook/addon-essentials": "7.6.1",
+    "@storybook/addon-essentials": "7.6.2",
     "@storybook/addon-interactions": "7.6.1",
     "@storybook/addon-links": "7.6.2",
     "@storybook/blocks": "7.6.1",
