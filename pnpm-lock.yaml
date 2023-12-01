@@ -26,8 +26,8 @@ devDependencies:
     specifier: 7.6.2
     version: 7.6.2(@types/react-dom@18.0.0)(@types/react@18.0.0)(react-dom@18.2.0)(react@18.2.0)
   '@storybook/preset-create-react-app':
-    specifier: 7.6.1
-    version: 7.6.1(@babel/core@7.23.5)(react-refresh@0.14.0)(react-scripts@5.0.1)(typescript@4.8.4)(webpack@5.89.0)
+    specifier: 7.6.3
+    version: 7.6.3(@babel/core@7.23.5)(react-refresh@0.14.0)(react-scripts@5.0.1)(typescript@4.8.4)(webpack@5.89.0)
   '@storybook/react':
     specifier: 7.6.2
     version: 7.6.2(react-dom@18.2.0)(react@18.2.0)(typescript@4.8.4)
@@ -493,14 +493,6 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       chalk: 2.4.2
       js-tokens: 4.0.0
-    dev: true
-
-  /@babel/parser@7.23.4:
-    resolution: {integrity: sha512-vf3Xna6UEprW+7t6EtOmFpHNAuxw3xqPZghy+brsnusscJRW5BMUzzHZc5ICjULee81WeUV2jjakG09MDglJXQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.23.5
     dev: true
 
   /@babel/parser@7.23.5:
@@ -1701,15 +1693,6 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@babel/types@7.23.4:
-    resolution: {integrity: sha512-7uIFwVYpoplT5jp/kVv6EF93VaJ8H+Yn5IczYiaAi98ajzjfoZfslet/e0sLh+wVBjb2qqIut1b0S26VSafsSQ==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.23.4
-      '@babel/helper-validator-identifier': 7.22.20
-      to-fast-properties: 2.0.0
     dev: true
 
   /@babel/types@7.23.5:
@@ -3059,7 +3042,7 @@ packages:
     dependencies:
       ansi-html-community: 0.0.8
       common-path-prefix: 3.0.0
-      core-js-pure: 3.21.0
+      core-js-pure: 3.33.3
       error-stack-parser: 2.0.6
       find-up: 5.0.0
       html-entities: 2.3.3
@@ -3069,45 +3052,6 @@ packages:
       source-map: 0.7.3
       webpack: 5.89.0(@swc/core@1.3.99)(esbuild@0.18.20)
       webpack-dev-server: 4.11.1(webpack@5.89.0)
-    dev: true
-
-  /@pmmmwh/react-refresh-webpack-plugin@0.5.7(react-refresh@0.14.0)(webpack@5.89.0):
-    resolution: {integrity: sha512-bcKCAzF0DV2IIROp9ZHkRJa6O4jy7NlnHdWL3GmcUxYWNjLXkK5kfELELwEfSP5hXPfVL/qOGMAROuMQb9GG8Q==}
-    engines: {node: '>= 10.13'}
-    peerDependencies:
-      '@types/webpack': 4.x || 5.x
-      react-refresh: '>=0.10.0 <1.0.0'
-      sockjs-client: ^1.4.0
-      type-fest: '>=0.17.0 <3.0.0'
-      webpack: '>=4.43.0 <6.0.0'
-      webpack-dev-server: 3.x || 4.x
-      webpack-hot-middleware: 2.x
-      webpack-plugin-serve: 0.x || 1.x
-    peerDependenciesMeta:
-      '@types/webpack':
-        optional: true
-      sockjs-client:
-        optional: true
-      type-fest:
-        optional: true
-      webpack-dev-server:
-        optional: true
-      webpack-hot-middleware:
-        optional: true
-      webpack-plugin-serve:
-        optional: true
-    dependencies:
-      ansi-html-community: 0.0.8
-      common-path-prefix: 3.0.0
-      core-js-pure: 3.21.0
-      error-stack-parser: 2.0.6
-      find-up: 5.0.0
-      html-entities: 2.3.3
-      loader-utils: 2.0.4
-      react-refresh: 0.14.0
-      schema-utils: 3.3.0
-      source-map: 0.7.3
-      webpack: 5.89.0(@swc/core@1.3.99)(esbuild@0.18.20)
     dev: true
 
   /@radix-ui/number@1.0.1:
@@ -4110,6 +4054,17 @@ packages:
       tiny-invariant: 1.3.1
     dev: true
 
+  /@storybook/channels@7.6.3:
+    resolution: {integrity: sha512-o9J0TBbFon16tUlU5V6kJgzAlsloJcS1cTHWqh3VWczohbRm+X1PLNUihJ7Q8kBWXAuuJkgBu7RQH7Ib46WyYg==}
+    dependencies:
+      '@storybook/client-logger': 7.6.3
+      '@storybook/core-events': 7.6.3
+      '@storybook/global': 5.0.0
+      qs: 6.11.2
+      telejson: 7.2.0
+      tiny-invariant: 1.3.1
+    dev: true
+
   /@storybook/cli@7.6.2:
     resolution: {integrity: sha512-E/8S5fStcipTkgItMzn3Q6ZtiHO2Aon8cemd2P7EhYvepgATklMNDWeawu4G83zqyu0BdzQGZDq3LA7z6MW0UA==}
     hasBin: true
@@ -4170,6 +4125,12 @@ packages:
 
   /@storybook/client-logger@7.6.2:
     resolution: {integrity: sha512-9hlDm7q6jZPVBoqW8V7DTMNMsjMaL2t45h+I8veQhnC2ZW6g+lARXQQDHZpL6MKVkJn6mEA9F0nJBIknbQpqBQ==}
+    dependencies:
+      '@storybook/global': 5.0.0
+    dev: true
+
+  /@storybook/client-logger@7.6.3:
+    resolution: {integrity: sha512-BpsCnefrBFdxD6ukMjAblm1D6zB4U5HR1I85VWw6LOqZrfzA6l/1uBxItz0XG96HTjngbvAabWf5k7ZFCx5UCg==}
     dependencies:
       '@storybook/global': 5.0.0
     dev: true
@@ -4325,6 +4286,12 @@ packages:
 
   /@storybook/core-events@7.6.2:
     resolution: {integrity: sha512-JciGNDclg3hx+WkXsAzcCBYWk0xsyIbyCAwqN7XVHUpGndR/dl97Qum5MkO9kPb8r5toKpeBOQo5Kxo2GiE0dg==}
+    dependencies:
+      ts-dedent: 2.2.0
+    dev: true
+
+  /@storybook/core-events@7.6.3:
+    resolution: {integrity: sha512-Vu3JX1mjtR8AX84lyqWsi2s2lhD997jKRWVznI3wx+UpTk8t7TTMLFk2rGYJRjaornhrqwvLYpnmtxRSxW9BOQ==}
     dependencies:
       ts-dedent: 2.2.0
     dev: true
@@ -4550,17 +4517,17 @@ packages:
     resolution: {integrity: sha512-XYJPzJ4ZCxTn6r/mTXKCtLUBLo0yPiA4fnCPE+ltyYvhLZ0Hm7o0TP4ew7zvoXKuGJZUH4vuEBCt+AdqrSp6Qw==}
     dev: true
 
-  /@storybook/preset-create-react-app@7.6.1(@babel/core@7.23.5)(react-refresh@0.14.0)(react-scripts@5.0.1)(typescript@4.8.4)(webpack@5.89.0):
-    resolution: {integrity: sha512-m0k4vS2I2Wt+xvfue3p1MVpemGyRWc+w/vUVwLpTZjBQAf3z7Nz2IVkszeNAOUNnm3mmlQJSqkrCCSesr1RqSQ==}
+  /@storybook/preset-create-react-app@7.6.3(@babel/core@7.23.5)(react-refresh@0.14.0)(react-scripts@5.0.1)(typescript@4.8.4)(webpack@5.89.0):
+    resolution: {integrity: sha512-5K+dQl0CWiXyGpcxOgF2Lml8A9roeYjR6ljLKYZukDpug5SLgr7RywS1PrZM4alcEItdFyKkXAEKNQwNhB+fnw==}
     peerDependencies:
       '@babel/core': '*'
       react-scripts: '>=5.0.0'
     dependencies:
       '@babel/core': 7.23.5
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.7(react-refresh@0.14.0)(webpack@5.89.0)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.11(react-refresh@0.14.0)(webpack@5.89.0)
       '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@4.8.4)(webpack@5.89.0)
-      '@storybook/types': 7.6.1
-      '@types/babel__core': 7.1.19
+      '@storybook/types': 7.6.3
+      '@types/babel__core': 7.20.5
       pnp-webpack-plugin: 1.7.0(typescript@4.8.4)
       react-scripts: 5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(@swc/core@1.3.99)(esbuild@0.18.20)(eslint-import-resolver-typescript@3.6.1)(eslint@8.54.0)(react@18.2.0)(typescript@4.8.4)
       semver: 7.5.4
@@ -4912,6 +4879,15 @@ packages:
       file-system-cache: 2.3.0
     dev: true
 
+  /@storybook/types@7.6.3:
+    resolution: {integrity: sha512-vj9Jzg5eR52l8O9512QywbQpNdo67Z6BQWR8QoZRcG+/Bhzt08YI8IZMPQLFMKzcmWDPK0blQ4GfyKDYplMjPA==}
+    dependencies:
+      '@storybook/channels': 7.6.3
+      '@types/babel__core': 7.20.5
+      '@types/express': 4.17.14
+      file-system-cache: 2.3.0
+    dev: true
+
   /@surma/rollup-plugin-off-main-thread@2.2.3:
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
     dependencies:
@@ -5212,11 +5188,11 @@ packages:
   /@types/babel__core@7.1.19:
     resolution: {integrity: sha512-WEOTgRsbYkvA/KCsDwVEGkd7WAr1e3g31VHQ8zy5gul/V1qKullU/BU5I68X5v7V3GnB9eotmom4v5a5gjxorw==}
     dependencies:
-      '@babel/parser': 7.23.4
-      '@babel/types': 7.23.4
+      '@babel/parser': 7.23.5
+      '@babel/types': 7.23.5
       '@types/babel__generator': 7.6.2
       '@types/babel__template': 7.0.3
-      '@types/babel__traverse': 7.0.15
+      '@types/babel__traverse': 7.20.4
     dev: true
 
   /@types/babel__core@7.20.5:
@@ -5239,12 +5215,6 @@ packages:
     resolution: {integrity: sha512-uCoznIPDmnickEi6D0v11SBpW0OuVqHJCa7syXqQHy5uktSCreIlt0iglsCnmvz8yCb38hGcWeseA8cWJSwv5Q==}
     dependencies:
       '@babel/parser': 7.23.5
-      '@babel/types': 7.23.5
-    dev: true
-
-  /@types/babel__traverse@7.0.15:
-    resolution: {integrity: sha512-Pzh9O3sTK8V6I1olsXpCfj2k/ygO2q1X0vhhnDrEQyYLHZesWz+zMZMVcwXLCYf0U36EtmyYaFGPfXlTtDHe3A==}
-    dependencies:
       '@babel/types': 7.23.5
     dev: true
 
@@ -7389,12 +7359,6 @@ packages:
     resolution: {integrity: sha512-cNzGqFsh3Ot+529GIXacjTJ7kegdt5fPXxCBVS1G0iaZpuo/tBz399ymceLJveQhFFZ8qThHiP3fzuoQjKN2ow==}
     dependencies:
       browserslist: 4.22.1
-    dev: true
-
-  /core-js-pure@3.21.0:
-    resolution: {integrity: sha512-VaJUunCZLnxuDbo1rNOzwbet9E1K9joiXS5+DQMPtgxd24wfsZbJZMMfQLGYMlCUvSxLfsRUUhoOR2x28mFfeg==}
-    deprecated: core-js-pure@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js-pure.
-    requiresBuild: true
     dev: true
 
   /core-js-pure@3.33.3:
