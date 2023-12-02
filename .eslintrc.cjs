@@ -80,7 +80,7 @@ module.exports = {
         jsxBracketSameLine: true,
         arrowParens: 'avoid',
       },
-    ]
+    ],
   },
   overrides: [
     /* Allow require imports for internal scripts */
@@ -119,13 +119,14 @@ module.exports = {
           {
             patterns: [
               {
-                "group": ['**/environment/**'],
-                "message": "Imports from environment directory are forbidden in the library files."
-              }
+                group: ['**/environment/**'],
+                message:
+                  'Imports from environment directory are forbidden in the library files.',
+              },
             ],
           },
-        ]
-      }
-    }
+        ],
+      },
+    },
   ],
 };
