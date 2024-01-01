@@ -26,8 +26,8 @@ devDependencies:
     specifier: 7.6.2
     version: 7.6.2(@types/react-dom@18.2.17)(@types/react@18.2.39)(react-dom@18.2.0)(react@18.2.0)
   '@storybook/preset-create-react-app':
-    specifier: 7.6.3
-    version: 7.6.3(@babel/core@7.23.5)(react-refresh@0.14.0)(react-scripts@5.0.1)(typescript@4.8.4)(webpack@5.89.0)
+    specifier: 7.6.6
+    version: 7.6.6(@babel/core@7.23.5)(react-refresh@0.14.0)(react-scripts@5.0.1)(typescript@4.8.4)(webpack@5.89.0)
   '@storybook/react':
     specifier: 7.6.3
     version: 7.6.3(react-dom@18.2.0)(react@18.2.0)(typescript@4.8.4)
@@ -4072,6 +4072,17 @@ packages:
       tiny-invariant: 1.3.1
     dev: true
 
+  /@storybook/channels@7.6.6:
+    resolution: {integrity: sha512-vvo7fBe2WffPonNNOA7Xx7jcHAto8qJYlq+VMysfheXrsRRbhHl3WQOA18Vm8hV9txtqdqk0hwQiXOWvhYVpeQ==}
+    dependencies:
+      '@storybook/client-logger': 7.6.6
+      '@storybook/core-events': 7.6.6
+      '@storybook/global': 5.0.0
+      qs: 6.11.2
+      telejson: 7.2.0
+      tiny-invariant: 1.3.1
+    dev: true
+
   /@storybook/cli@7.6.2:
     resolution: {integrity: sha512-E/8S5fStcipTkgItMzn3Q6ZtiHO2Aon8cemd2P7EhYvepgATklMNDWeawu4G83zqyu0BdzQGZDq3LA7z6MW0UA==}
     hasBin: true
@@ -4138,6 +4149,12 @@ packages:
 
   /@storybook/client-logger@7.6.3:
     resolution: {integrity: sha512-BpsCnefrBFdxD6ukMjAblm1D6zB4U5HR1I85VWw6LOqZrfzA6l/1uBxItz0XG96HTjngbvAabWf5k7ZFCx5UCg==}
+    dependencies:
+      '@storybook/global': 5.0.0
+    dev: true
+
+  /@storybook/client-logger@7.6.6:
+    resolution: {integrity: sha512-WEvVyuQR5oNF8jcMmGA13zDjxP/l46kOBBvB6JSc8toUdtLZ/kZWSnU0ioNM8+ECpFqXHjBcF2K6uSJOEb6YEg==}
     dependencies:
       '@storybook/global': 5.0.0
     dev: true
@@ -4330,6 +4347,12 @@ packages:
 
   /@storybook/core-events@7.6.3:
     resolution: {integrity: sha512-Vu3JX1mjtR8AX84lyqWsi2s2lhD997jKRWVznI3wx+UpTk8t7TTMLFk2rGYJRjaornhrqwvLYpnmtxRSxW9BOQ==}
+    dependencies:
+      ts-dedent: 2.2.0
+    dev: true
+
+  /@storybook/core-events@7.6.6:
+    resolution: {integrity: sha512-7+q9HiZiLxaQcwpaSLQrLdjHNHBoOoUY9ZcZXI9iNFSopOgb/ItDnzzlpv08NC7CbKae1hVKJM/t5aSTl7tCMw==}
     dependencies:
       ts-dedent: 2.2.0
     dev: true
@@ -4574,8 +4597,8 @@ packages:
     resolution: {integrity: sha512-WpgdpJpY6rionluxjFZLbKiSDjvQJ5cPgufjvBRuXTsnVOsH3JNRWnPdkQkJLT9uTUMoNcyBMxbjYkK3vU6wSg==}
     dev: true
 
-  /@storybook/preset-create-react-app@7.6.3(@babel/core@7.23.5)(react-refresh@0.14.0)(react-scripts@5.0.1)(typescript@4.8.4)(webpack@5.89.0):
-    resolution: {integrity: sha512-5K+dQl0CWiXyGpcxOgF2Lml8A9roeYjR6ljLKYZukDpug5SLgr7RywS1PrZM4alcEItdFyKkXAEKNQwNhB+fnw==}
+  /@storybook/preset-create-react-app@7.6.6(@babel/core@7.23.5)(react-refresh@0.14.0)(react-scripts@5.0.1)(typescript@4.8.4)(webpack@5.89.0):
+    resolution: {integrity: sha512-u1oFGTtslZIaJIHLcfPlJbymZ02zSq69GWtUdMbfYoLsZfPa1/cGec02rA8Taho6Xb8p8N3X2HL7vqEhBL+nDg==}
     peerDependencies:
       '@babel/core': '*'
       react-scripts: '>=5.0.0'
@@ -4583,7 +4606,7 @@ packages:
       '@babel/core': 7.23.5
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.11(react-refresh@0.14.0)(webpack@5.89.0)
       '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@4.8.4)(webpack@5.89.0)
-      '@storybook/types': 7.6.3
+      '@storybook/types': 7.6.6
       '@types/babel__core': 7.20.5
       pnp-webpack-plugin: 1.7.0(typescript@4.8.4)
       react-scripts: 5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(@swc/core@1.3.99)(esbuild@0.18.20)(eslint-import-resolver-typescript@3.6.1)(eslint@8.54.0)(react@18.2.0)(typescript@4.8.4)
@@ -4941,7 +4964,7 @@ packages:
     resolution: {integrity: sha512-xwEdMHbms7nnyPugqrxjz62n1CoAZ6I+m6y7Rfk/2C0nsgpS0Go1UXUNmcWNxx2ZYX7bEgSPZtcYZa9buPSY3g==}
     dependencies:
       '@storybook/channels': 7.6.1
-      '@types/babel__core': 7.1.19
+      '@types/babel__core': 7.20.5
       '@types/express': 4.17.14
       file-system-cache: 2.3.0
     dev: true
@@ -4959,6 +4982,15 @@ packages:
     resolution: {integrity: sha512-vj9Jzg5eR52l8O9512QywbQpNdo67Z6BQWR8QoZRcG+/Bhzt08YI8IZMPQLFMKzcmWDPK0blQ4GfyKDYplMjPA==}
     dependencies:
       '@storybook/channels': 7.6.3
+      '@types/babel__core': 7.20.5
+      '@types/express': 4.17.14
+      file-system-cache: 2.3.0
+    dev: true
+
+  /@storybook/types@7.6.6:
+    resolution: {integrity: sha512-77vbQp3GX93OD8UzFkY4a0fAmkZrqLe61XVo6yABrwbVDY0EcAwaCF5gcXRhOHldlH7KYbLfEQkDkkKTBjX7ow==}
+    dependencies:
+      '@storybook/channels': 7.6.6
       '@types/babel__core': 7.20.5
       '@types/express': 4.17.14
       file-system-cache: 2.3.0
@@ -5259,16 +5291,6 @@ packages:
 
   /@types/aria-query@5.0.1:
     resolution: {integrity: sha512-XTIieEY+gvJ39ChLcB4If5zHtPxt3Syj5rgZR+e1ctpmK8NjPf0zFqsz4JpLJT0xla9GFDKjy8Cpu331nrmE1Q==}
-    dev: true
-
-  /@types/babel__core@7.1.19:
-    resolution: {integrity: sha512-WEOTgRsbYkvA/KCsDwVEGkd7WAr1e3g31VHQ8zy5gul/V1qKullU/BU5I68X5v7V3GnB9eotmom4v5a5gjxorw==}
-    dependencies:
-      '@babel/parser': 7.23.5
-      '@babel/types': 7.23.5
-      '@types/babel__generator': 7.6.2
-      '@types/babel__template': 7.0.3
-      '@types/babel__traverse': 7.20.4
     dev: true
 
   /@types/babel__core@7.20.5:
