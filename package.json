@@ -47,7 +47,7 @@
     "@rollup/plugin-typescript": "11.1.5",
     "@storybook/addon-essentials": "7.6.17",
     "@storybook/addon-interactions": "7.6.7",
-    "@storybook/addon-links": "7.6.17",
+    "@storybook/addon-links": "8.0.5",
     "@storybook/blocks": "7.6.7",
     "@storybook/preset-create-react-app": "7.6.6",
     "@storybook/react": "7.6.3",
