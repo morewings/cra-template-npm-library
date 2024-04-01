@@ -85,7 +85,7 @@
     "react-scripts": "5.0.1",
     "recursive-copy": "2.0.14",
     "rimraf": "5.0.5",
-    "rollup": "3.29.4",
+    "rollup": "4.13.2",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-postcss": "4.0.2",
     "storybook": "7.6.7",
