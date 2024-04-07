@@ -1,7 +1,6 @@
-[![Node.js CI](https://github.com/morewings/cra-template-npm-library/actions/workflows/merge-jobs.yml/badge.svg)](https://github.com/morewings/cra-template-npm-library/actions/workflows/merge-jobs.yml)
-[![types included](https://img.shields.io/github/package-json/types/morewings/cra-template-npm-library)](https://github.com/morewings/cra-template-npm-library)
-[![npm version](https://badge.fury.io/js/cra-template-npm-library.svg)](https://www.npmjs.com/package/cra-template-npm-library)
-[![npm](https://img.shields.io/npm/dm/cra-template-npm-library)](http://npm-stats.org/#/cra-template-npm-library)
+# Deprecation notice
+
+**Create React App is not updated by its maintainers anymore. So this project can't be updated as well. I recommend to use [React Library Template](https://github.com/morewings/react-library-template) which has all the same functionality plus new features.**
 
 # NPM library Create React App template
 
